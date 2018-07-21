@@ -1,0 +1,91 @@
+/* pages/self/message/index.wxss */
+@import '../../../style/common.wxss';
+.container {
+  height: 100%;
+  background-color: #f3f3f3;
+  position: absolute;
+}
+.head {
+  width: 100%;
+  height: 90rpx;
+  padding: 14rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 2rpx solid #ddd;
+}
+.order_tabs {
+  margin: 0 auto;
+  padding: 4rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #dddddd;
+  border-radius: 60rpx;
+}
+.order_tab_item {
+  width: 160rpx;
+  height: 60rpx;
+  padding: 14rpx;
+  font-size:  24rpx;
+  line-height: 30rpx;
+  color: #333333;
+  text-align: center;
+  border-radius: 30rpx;
+}
+.order_tab_item.active {
+  background-color: #ff6600;
+  color: #ffffff;
+}
+.typelist {
+  width: 100%;
+  margin-bottom: 20rpx;
+  padding: 10rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+}
+.typelist  view {
+  font-size: 24rpx;
+  line-height: 60rpx;
+  color: #999999;
+  border-bottom-width: 4rpx;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+}
+.typelist  view.active {
+  color: #ff6600;
+  border-bottom-color: #ff6600;
+}
+.cont_list_item {
+  width: 100%;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 2rpx solid #ddd;
+}
+.cont_item_name{
+  font-size: 30rpx;
+  line-height: 1em;
+  color: #333333;
+}
+.cont_item_date {
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: #999999;
+}
+.msg-nodata{
+  padding: 50rpx;
+  line-height: 100rpx;
+  font-size: 26rpx;
+  color:#666;
+  text-align: center;
+}

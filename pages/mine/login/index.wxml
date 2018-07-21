@@ -1,0 +1,6 @@
+<!--pages/mine/login/index.wxml-->
+<view class='container'style="background-color: #f5f5f5;">
+  <image src="{{logopic}}" class='logo'/>
+  <view class='btn btn_wxlogin' bindtap='WXLogin'>微信授权登录</view>
+  <!-- <view class='btn btn_phlogin' bindtap='phlogin'>手机号登录</view> -->
+</view>

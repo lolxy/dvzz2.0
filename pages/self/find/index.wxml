@@ -1,0 +1,26 @@
+<!--pages/self/find/index.wxml-->
+<view class="container">
+  <view class='fixed-box' wx:if="{{isShow}}">
+    <view class='searchgrp'>
+      <view class="search-item">
+        <input placeholder="搜索" auto-focus="{{false}}" value='{{Searchdata}}' confirm-type="search" bindconfirm="getSearch"/>
+      </view>
+    </view>
+    <view class='typelist'>
+      <view class="{{currentid == ''?'active':''}}" data-fid="" bindtap='TabsChange'>全部</view>
+      <view class="{{item.fOrgID==currentid?'active':''}}"  wx:for="{{tabs}}" data-fid="{{item.fOrgID}}" wx:key="{{index}}" data-index="{{index}}" bindtap='TabsChange'>{{item.fOrgName}}</view>
+    </view>
+  </view>
+  <view class='list-box' wx:if="{{datalist.length}}">
+  <view class='find_lst' wx:for="{{datalist}}" wx:key="{{index}}">
+    <image class="find_item_pic" src="{{item.fPhoto}}" data-url="{{item.fPhoto}}" bindtap='showimg'/>
+    <view class='sec_item' bindtap='ToFindDetail' data-feid="{{item.fEmployID}}" data-name="{{item.fEmployName}}" data-fyear="{{item.fYear}}" data-phone='{{item.fMobile}}' data-discript="{{item.fIntroduce}}" data-fphoto="{{item.fPhoto}}">
+      <view>姓名：{{item.fEmployName}}</view>
+      <view>电话：{{item.fMobile}}</view>
+      <view>工龄：{{item.fYear}}年</view>
+      <view>工种：{{item.fOrgName}}</view>
+    </view>
+  </view>
+  </view>
+  <view class='no-data' wx:else>没有您要查找的工人记录!</view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "确认订单",
+  "usingComponents": {
+    "select-address":"/components/order/selectAddress/item",
+    "batch-select": "/components/order/batchSelect/item",
+    "batch-order": "/components/order/batchOrder/item",
+    "unit-order": "/components/order/unitOrder/item"
+  }
+}

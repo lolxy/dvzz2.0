@@ -1,0 +1,169 @@
+<view class="select-brand-wrap">
+  <view class='brandlist'>
+    <view class='theader'>
+      <view class='th'>类别</view>
+      <view class='td'>品牌</view>
+    </view>
+    <scroll-view class='tbody' scroll-y="{{true}}">
+      <view class='brand-item-box'>
+      <view class='item'>
+        <view class='th'>电线类</view>
+        <view class='td'>
+          <radio-group class="radio-group" data-index="0" bindchange="radioChange">
+            <label class="radio">
+              <radio value="0" color="#ff6600" checked="false"/>太阳
+            </label>
+            <label class="radio">
+              <radio value="1" color="#ff6600" checked="false"/>飞雕
+            </label>
+          </radio-group>
+        </view>
+      </view>
+
+       <view class='item'>
+        <view class='th'>电线类</view>
+        <view class='td'>
+          <radio-group class="radio-group" data-index="0" bindchange="radioChange">
+            <label class="radio">
+              <radio value="0" color="#ff6600" checked="false"/>太阳
+            </label>
+            <label class="radio">
+              <radio value="1" color="#ff6600" checked="false"/>飞雕
+            </label>
+          </radio-group>
+        </view>
+      </view>
+
+       <view class='item'>
+        <view class='th'>电线类</view>
+        <view class='td'>
+          <radio-group class="radio-group" data-index="0" bindchange="radioChange">
+            <label class="radio">
+              <radio value="0" color="#ff6600" checked="false"/>太阳
+            </label>
+            <label class="radio">
+              <radio value="1" color="#ff6600" checked="false"/>飞雕
+            </label>
+          </radio-group>
+        </view>
+      </view>
+
+       <view class='item'>
+        <view class='th'>电线类</view>
+        <view class='td'>
+          <radio-group class="radio-group" data-index="0" bindchange="radioChange">
+            <label class="radio">
+              <radio value="0" color="#ff6600" checked="false"/>太阳
+            </label>
+            <label class="radio">
+              <radio value="1" color="#ff6600" checked="false"/>飞雕
+            </label>
+          </radio-group>
+        </view>
+      </view>
+
+       <view class='item'>
+        <view class='th'>电线类</view>
+        <view class='td'>
+          <radio-group class="radio-group" data-index="0" bindchange="radioChange">
+            <label class="radio">
+              <radio value="0" color="#ff6600" checked="false"/>太阳
+            </label>
+            <label class="radio">
+              <radio value="1" color="#ff6600" checked="false"/>飞雕
+            </label>
+          </radio-group>
+        </view>
+      </view>
+
+       <view class='item'>
+        <view class='th'>电线类</view>
+        <view class='td'>
+          <radio-group class="radio-group" data-index="0" bindchange="radioChange">
+            <label class="radio">
+              <radio value="0" color="#ff6600" checked="false"/>太阳
+            </label>
+            <label class="radio">
+              <radio value="1" color="#ff6600" checked="false"/>飞雕
+            </label>
+          </radio-group>
+        </view>
+      </view>
+
+       <view class='item'>
+        <view class='th'>电线类</view>
+        <view class='td'>
+          <radio-group class="radio-group" data-index="0" bindchange="radioChange">
+            <label class="radio">
+              <radio value="0" color="#ff6600" checked="false"/>太阳
+            </label>
+            <label class="radio">
+              <radio value="1" color="#ff6600" checked="false"/>飞雕
+            </label>
+          </radio-group>
+        </view>
+      </view>
+
+       <view class='item'>
+        <view class='th'>电线类</view>
+        <view class='td'>
+          <radio-group class="radio-group" data-index="0" bindchange="radioChange">
+            <label class="radio">
+              <radio value="0" color="#ff6600" checked="false"/>太阳
+            </label>
+            <label class="radio">
+              <radio value="1" color="#ff6600" checked="false"/>飞雕
+            </label>
+          </radio-group>
+        </view>
+      </view>
+
+       <view class='item'>
+        <view class='th'>电线类</view>
+        <view class='td'>
+          <radio-group class="radio-group" data-index="0" bindchange="radioChange">
+            <label class="radio">
+              <radio value="0" color="#ff6600" checked="false"/>太阳
+            </label>
+            <label class="radio">
+              <radio value="1" color="#ff6600" checked="false"/>飞雕
+            </label>
+          </radio-group>
+        </view>
+      </view>
+
+       <view class='item'>
+        <view class='th'>电线类</view>
+        <view class='td'>
+          <radio-group class="radio-group" data-index="0" bindchange="radioChange">
+            <label class="radio active">
+              <radio value="0" color="#ff6600" checked="false"/>太阳
+            </label>
+            <label class="radio">
+              <radio value="1" color="#ff6600" checked="false"/>飞雕
+            </label>
+            <label class="radio active">
+              <radio value="0" color="#ff6600" checked="false"/>太阳
+            </label>
+            <label class="radio">
+              <radio value="1" color="#ff6600" checked="false"/>飞雕
+            </label>
+            <label class="radio active">
+              <radio value="0" color="#ff6600" checked="false"/>太阳
+            </label>
+            <label class="radio">
+              <radio value="1" color="#ff6600" checked="false"/>飞雕
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='footer'>
+    <view class='btn-box'>
+      <view class='btn btn-full btn-radius' bindtap='onSubmitData'>确定</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/self/auxiliary/brand/index.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit">
+  <scroll-view class='tablebox' scroll-y>
+    <view class='table table_border'>
+      <view class='thead'>
+        <view class='flex_col_1'>类别</view>
+        <view class='flex_col_2'>品牌</view>
+      </view>
+      <view class='tbody'>
+        <!-- 提交变量个数  -->
+        <input name="categorynum" value="{{tableDataList.length}}" hidden='{{true}}'></input>
+        <view class='tabrows' wx:for="{{tableDataList}}" wx:key="{{category.id}}" wx:for-item="category" wx:for-index="idx">
+          <view class='flex_col_1'>
+            <input  name="{{'category'+idx}}" value="{{category.fMatColor}}" hidden='{{true}}'></input>
+            {{category.fMatColor}}
+          </view>
+          <view class='flex_col_2'>
+            <radio-group class="radio-group" name="{{'brand'+idx}}">
+              <label class="radio {{brand.fIsDefault==1?'active':''}}" wx:for="{{category.list}}" wx:key="{{brand.fBrandName}}" wx:for-item="brand" wx:for-index="idy"  data-idx="{{idx}}" data-idy="{{idy}}" bindtap='changeindex'>
+                <radio value="{{brand.fBrandName}}" color="#ff6600" checked="{{brand.fIsDefault==1?true:false}}"/>{{brand.fBrandName}}
+              </label>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+    <view class='foot'>
+      <button formType="submit"> 确  定 </button>
+    </view>
+  </form>
+</view>

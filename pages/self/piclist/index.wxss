@@ -1,0 +1,53 @@
+/* pages/self/piclist/index.wxss */
+@import '../../../style/common.wxss';
+.container {
+  width: 100%;
+  background-color: #f3f3f3;
+}
+.typelist {
+  width: 100%;
+  margin-bottom: 20rpx;
+  padding: 10rpx 0;
+  background-color: #ffffff;
+  white-space: nowrap;
+}
+.typelist  view {
+  display: inline-block;
+  margin: 0 30rpx;
+  font-size: 32rpx;
+  line-height: 60rpx;
+  color: #999999;
+  border-bottom-width: 4rpx;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+}
+.typelist  view.active {
+  color: #ff6600;
+  border-bottom-color: #ff6600;
+}
+/****  图片列表  ****/
+.piclist {
+  padding: 30rpx 30rpx 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;  
+  align-content: flex-start;
+}
+.picitem {
+  width: 330rpx;
+  margin-bottom: 30rpx;
+  border-radius: 10rpx;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.picitem image{
+  width: 330rpx;
+  height: 250rpx;
+}
+.picitem view {
+  padding: 20rpx;
+  font-size: 26rpx;
+  line-height: 1em;
+  color: #333333;
+
+}

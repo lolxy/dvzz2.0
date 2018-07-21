@@ -1,0 +1,68 @@
+.evaluate-item{
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #dedede;
+}
+
+.evaluate-item .icon{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: top;
+}
+
+.evaluate-item .photo{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  vertical-align: top;
+  margin-right: 20rpx;
+}
+
+.evaluate-item .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex:1;
+}
+
+.evaluate-item .content .title{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  height: 30rpx;
+}
+
+.evaluate-item .content .title .tbox{
+  font-size: 26rpx;
+  color:#333;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.evaluate-item .content .title text{
+  font-size:20rpx;
+  color:#999;
+}
+
+.evaluate-item .content .scope{
+  display: flex;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.evaluate-item .content .scope .s{
+  padding: 5rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.evaluate-item .content .des{
+  font-size: 20rpx;
+  line-height: 36rpx;
+  color:#666;
+}

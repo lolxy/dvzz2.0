@@ -1,0 +1,66 @@
+/**app.wxss**/
+.development-wrapper{
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+view, image, text, form,scroll-view{
+  box-sizing: border-box;
+}
+
+image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+page{
+  background-color: #f3f3f3;
+}
+
+.mb20{
+  margin-bottom: 20rpx;
+}
+
+.navigator-hover {
+background-color:#fff;
+opacity:1;
+}
+
+/* 新版公共样式 */
+.icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.action-btnbox{
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 5rpx 5rpx 10rpx rgba(148,151,154,0.35);
+  display: flex;
+  padding: 15rpx 5rpx;
+  box-sizing: border-box; 
+}
+
+.action-btnbox .btn{
+  margin:0 15rpx;
+  flex:1;
+  height: 68rpx;
+  line-height: 65rpx;
+  text-align: center;
+  letter-spacing: 5rpx;
+  font-size: 30rpx;
+  color:#ff6600;
+  border:1rpx solid #ff6600;
+  border-radius: 68rpx;
+}
+
+.action-btnbox .btn.btn-warning{
+  background-color: #ff6600;
+  color:#fff;
+}
+

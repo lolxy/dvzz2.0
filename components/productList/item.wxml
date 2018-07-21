@@ -1,0 +1,25 @@
+<!--components/productItem/productItem.wxml-->
+<view class='pro-list' wx:if="{{list.length}}">
+<block  wx:for='{{list}}' wx:key='{{index}}'>
+  <view class='pro-item' data-id="{{item.fMatID}}" data-selectid="{{item.fSelectMatDetailID}}" data-amount="{{item.fAmount}}" bindtap='gotoPage' wx:if="{{item.fMatID}}">
+    <image src="{{item.fThumbnailUrl?item.fThumbnailUrl:loadimg}}" lazy-load='true' wx:if="{{!displayType}}"></image>
+    <image src="{{item.fUrl?item.fUrl:loadimg}}" lazy-load='true' wx:else></image>
+    <view class='title'>{{item.fMatName}}</view>
+    <view class='budget price' wx:if="{{displayType == 'budget'}}">
+      <view class='sale'><block wx:if="{{item.fPrice}}">￥<text>{{item.fPrice}}</text>元<block wx:if="{{item.fUnitName}}">/{{item.fUnitName}}</block></block></view>
+      <view class='sum'><block wx:if="{{item.fAmount}}">总价：{{item.fAmount}}元</block></view>
+    </view>
+    <view class='fucai price' wx:elif="{{displayType == 'fucai'}}">
+      零售价：<view class='sale'>￥<text>{{item.fPrice}}</text>元<block wx:if="{{item.fUnitName}}">/{{item.fUnitName}}</block></view>
+    </view>
+    <view class='mall price' wx:else>
+      <view class='sale'><block wx:if="{{item.fPrice}}">￥<text>{{item.fPrice}}</text>元<block wx:if="{{item.fUnitName}}">/{{item.fUnitName}}</block></block></view>
+      <view class='old' wx:if="{{displayType == 'mall' && item.fOldPrice != 0}}"><block wx:if="{{item.fOldPrice}}">原价：￥{{item.fOldPrice}}元</block></view>
+    </view>
+    <view class='info' wx:if="{{displayType != 'fucai'}}">
+      <view class='store'>{{item.fShopCityName}}</view>
+      <view class='area'>{{item.distance}}</view>
+    </view>
+  </view> 
+  </block>
+</view>

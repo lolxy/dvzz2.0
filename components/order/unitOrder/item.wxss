@@ -1,0 +1,71 @@
+.unit-wrapper{
+  padding: 20rpx;
+  display: flex;
+}
+.unit-wrapper .img{
+  width: 140rpx;
+  height: 140rpx;
+  border:1rpx solid #dedede;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+.unit-wrapper .content{
+  flex:1;
+  overflow: hidden;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+.unit-wrapper .content navigator{
+  font-size:30rpx;
+  color:#333;
+  line-height: 60rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+}
+.unit-wrapper .content .attr{
+  display: flex;
+  justify-content: space-between;
+  height: 60rpx;
+  align-content: center;
+  align-items: center;
+}
+.unit-wrapper .content .attr text{
+  font-size:28rpx;
+  color:#d32f2e;
+}
+.addplus{
+  display: flex;
+  width: 202rpx;
+  height: 60rpx;
+  border: 1rpx solid #d1d1d1;
+  border-radius: 10rpx;
+  align-self: flex-end;
+}
+
+.addplus .plus,.addplus .reduce{
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  padding: 9rpx;
+  box-sizing: border-box;
+}
+
+.addplus .input{
+  border-left:1rpx solid #d1d1d1;
+  border-right:1rpx solid #d1d1d1;
+  text-align: center;
+  padding: 0 10rpx;
+  flex:1;
+}
+
+.addplus .input input{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 36rpx;
+  color:#666;
+  width: 100%;
+}

@@ -1,0 +1,21 @@
+<view class="unit-wrapper">
+  <view class='img'>
+    <image src="{{imgurl}}"></image>
+  </view>
+  <view class='content'>
+    <view class='base'>
+      <view class='leftbox'>
+        <navigator url='#'>
+          高清有线电视线信号线纯铜同轴线高清有线电视线信号线纯铜同轴线高清有线电视线信号线纯铜同轴线
+        </navigator>
+        <text>横平竖直（不含吊顶）</text>
+         <text>规格：800*800</text> 
+      </view>
+      <view class='rightbox'>
+        <text class='price'>￥65元</text>
+        <text class='num'>×10</text>
+        <text class='sum'>小计：<text>￥6554元</text></text>
+      </view>
+    </view>
+  </view>
+</view>

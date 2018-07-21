@@ -1,0 +1,57 @@
+<view class='filter-wrap'>
+  <scroll-view class='filter-data-list' scroll-y>
+    <block wx:if="{{filterList.length}}">
+    <view class='panel' wx:for="{{filterList}}" wx:key="{{index}}">
+      <view class='panel-header'>
+        <text>{{item.title}}</text>
+        <view class="down {{currentIndex == index && isOpen?'open':''}}" data-index="{{index}}" bindtap='togglePanel'>
+        <image src="{{downIcon}}"></image>
+        </view>
+      </view>
+      <view class="panel-body {{currentIndex == index && isOpen?'open':''}}">
+        <view class='list'>
+          <view class="item {{ditem.checked?'on':''}}" wx:for="{{item.list}}" wx:for-index="dindex" wx:for-item="ditem" wx:key="{{dindex}}" data-index="{{index}}" data-dindex="{{dindex}}" data-value="{{ditem.fValue}}" data-key="{{item.key}}" data-checked="{{ditem.checked}}" bindtap='getCurrentSpec'>
+             {{ditem.fName}}
+          </view>
+        </view>
+      </view>
+    </view>
+    </block>
+
+    <view class='panel'>
+      <view class='panel-header'>
+        <text>价格</text>
+      </view>
+      <view class="panel-body">
+        <view class='list'>
+          <view class="item {{minPrice && maxPrice?'':'on'}}">不限</view>
+          <view class='price'>
+            <input type="digit" value="{{minPrice}}" bindinput='getMinPrice'/>
+            <text> — </text>
+            <input type="digit" value="{{maxPrice}}" bindinput='getMaxPrice'/>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='panel panel-area' wx:if="{{displayType == 'budget'}}">
+      <view class='panel-header'>
+        <text>默认筛选</text>
+        <checkbox-group bindchange="selectDefault">
+          <label class="checkbox">
+            <checkbox checked="{{selected}}" color="#ff6600"/>
+          </label>
+        </checkbox-group>
+      </view>
+      <view class="panel-body">
+        <view class='text-area'>
+          <view class='area-content'>{{fDefault.fName}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='action-box'>
+    <view bindtap='resetFilter'><button class='reset'>重置</button></view>
+    <view bindtap='submitFilter'><button class='submit'>确定</button></view>
+  </view>
+</view>

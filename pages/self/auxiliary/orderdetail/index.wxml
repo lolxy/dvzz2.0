@@ -1,0 +1,38 @@
+<!--pages/order/list/index.wxml-->
+<view class='container'>
+  <view class='head'>订单号：{{fReceiptNo}}</view>
+  <view class='order_list order-table'>
+    <view class='t-fix'>
+      <view class='table-th'>材料名称</view>
+      <view class='table-th'>单价</view>
+      <view class='table-th'>单位</view>
+      <view class='table-th'>数量</view>
+      <view class='table-th'>小计</view>
+    </view>
+    <scroll-view class='order-wrap' scroll-y>
+      <view class='t-list' wx:for="{{DataList}}" wx:key="{{index}}">
+        <view class='table-td'>{{item.fMatOldCode}}</view>
+        <view class='table-td'>{{item.fPrice}}</view>
+        <view class='table-td'>{{item.fUnitName}}</view>
+        <view class='table-td'>{{item.fQuantity}}</view>
+        <view class='table-td'>{{item.fAmount}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='foot'>
+    <view class='foot_l_grp'>
+      <view wx:if="{{flag=='0'}}">
+        <image src="{{DelIcon}}"></image>
+        <view bindtap='DelOrder'>删除</view>
+      </view>
+    </view>
+    <view class='foot_r_grp'>
+      <view>合计:{{fAmount}}元</view>
+      <view wx:if="{{flag == 1||flag == 2 || flag==0}}">
+        <view class='btn foot_button' wx:if="{{flag == 0}}"  bindtap='payOrder' data-soid="{{item.fSaleOrderID}}" data-amount="{{fAmount}}">支付</view>
+        <view class='btn foot_button' wx:if="{{flag == 1}}" bindtap='ConfirmReceipt'>确认收货</view>
+        <view class='btn foot_button' wx:elif="{{flag == 2}}" bindtap='ToEvaluate' data-fid="{{item.fSaleOrderID}}">评价</view>
+      </view>
+    </view>
+  </view>
+</view>

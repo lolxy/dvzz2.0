@@ -1,0 +1,53 @@
+<view class="address-add-wrapper">
+  <view class='box'>
+    <view class='dl'>
+      <view class='dt'>收货人：</view>
+      <view class='dd'><input placeholder="输入收货人姓名"/></view>
+    </view>
+
+    <view class='dl'>
+      <view class='dt'>性别：</view>
+      <view class='dd'>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio">
+            <radio value="1" checked="{{true}}" color="#ff6600"/>男
+          </label>
+          <label class="radio">
+            <radio value="0" color="#ff6600"/>女
+          </label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view class='dl'>
+      <view class='dt'>联系电话：</view>
+      <view class='dd'><input type="number" placeholder="请输入收货人联系电话"/></view>
+    </view>
+  </view>
+
+  <view class='box'>
+    <view class='dl select'>
+      <view class='dt'>收货地址：</view>
+      <view class='dd'>
+        <text>请选择</text>
+        <image src="{{rightIcon}}"></image>
+      </view>
+    </view>
+
+    <view class='dl'>
+      <view class='dt'>详细地址：</view>
+      <view class='dd'><input placeholder="小区、楼牌号等"/></view>
+    </view>
+  </view>
+
+  <view class='box'>
+    <view class='default'>
+      <text>设为默认地址</text>
+      <switch checked color="#ff6600" bindchange="switchChange"/>
+    </view>
+  </view>
+</view>
+
+<view class='action-btnbox'>
+  <view class='btn btn-warning' bindtap='addNewAddress'>保存</view>
+</view>

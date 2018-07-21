@@ -1,0 +1,17 @@
+<view class='mall-list'>
+  <view wx:if="{{mallList.length}}">
+  <view class='mall-item' wx:for="{{mallList}}" wx:key="{{index}}">
+    <image src="{{item.fImgUrl?item.fImgUrl:loadImg}}"></image>
+    <view class='content'>
+      <view class='title'>{{item.fName}}</view>
+      <view class='info'>
+        <text>{{item.fTitle}}</text>
+        <text>{{item.fHotline}}</text>
+      </view>
+    </view>
+  </view>
+  </view>
+  <view wx:else class='nodata'>
+    暂无数据
+  </view>
+</view>

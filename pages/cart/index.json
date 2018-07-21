@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "购物车",
+  "usingComponents": {
+    "batch-order": "/components/order/batchOrder/item",
+    "unit-order": "/components/order/unitOrder/item"
+  }
+}

@@ -1,0 +1,66 @@
+/* pages/mine/aftersale/index.wxss */
+view, image, text, scroll-view, radio-group {
+  box-sizing: border-box;
+}
+image {
+  width: 100%;
+  min-height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 20rpx;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: #f3f3f3;
+}
+.cont_title {
+  width: 100%;
+  padding: 30rpx 20rpx;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #ddd;
+  border-top-right-radius: 10rpx;
+  border-top-left-radius: 10rpx;
+}
+.cont_title_name {
+  font-size: 30rpx;
+  line-height: 1em;
+  color: #333333;
+}
+.cont_title_stat {
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: #999999;
+}
+.cont_title_stat.active {
+  color: #ff6600;
+}
+.cont_body + .cont_title {
+  margin-top: 20rpx;
+}
+.cont_body {
+  padding: 12rpx 20rpx;
+  background-color: #ffffff;
+  border-bottom-right-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+.cont_body view {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #666666;
+}
+
+.nodata{
+  padding: 20rpx;
+  line-height: 120rpx;
+  font-size: 26rpx;
+  color:#666666;
+  text-align: center;
+}

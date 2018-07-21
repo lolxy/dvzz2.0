@@ -1,0 +1,188 @@
+/* pages/main/budget/index/index.wxss */
+.container{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.nav{
+  height: 160rpx;
+  background-color: #fff;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  top:0;
+  width: 100%;
+}
+
+.nav .item{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.nav .item image{
+  width: 80rpx;
+  height: 80rpx;
+  vertical-align: top;
+}
+
+.nav .item text{
+  color:#666;
+  font-size:26rpx;
+}
+
+.nav .item text.on{
+  color:#ff6600;
+}
+
+.xuancai-wrap{
+  background-color: #fff;
+  position: absolute;
+  top:180rpx;
+  bottom: 139rpx;
+  overflow: hidden;
+  width: 100%;
+}
+
+.x-header{
+  border-bottom: 1rpx solid #dedede;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color:#333;
+  padding: 0 20rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.x-header text{
+  font-weight: 500;
+}
+
+.x-header navigator{
+  width: 130rpx;
+  color:#ff6600;
+  font-size:26rpx;
+  text-align: center;
+  line-height: 48rpx;
+  border:1rpx solid #ff6600;
+  border-radius: 48rpx;
+}
+
+.xuancai-wrap .list{
+  position: absolute;
+  top:88rpx;
+  bottom:0;
+  width: 100%;
+}
+
+.xuancai-wrap .list .item{
+  height: 88rpx;
+  border-bottom:1rpx solid #dedede;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  color:#333;
+  box-sizing: border-box;
+  line-height: 88rpx;
+}
+
+.xuancai-wrap .list .item:last-child{
+  border-bottom: none;
+}
+
+.xuancai-wrap .list .item .title{
+  width: 240rpx;
+  font-size: 28rpx;
+  display: flex;
+}
+
+.xuancai-wrap .list .item .title text{
+  margin-left: 20rpx;
+}
+
+.badge{
+  width: 24rpx;
+  height: 24rpx;
+  color:#fff;
+  background-color: #d32f2e;
+  font-size:20rpx;
+  border-radius: 24rpx;
+  text-align: center;
+  line-height: 24rpx;
+  display:inline-block;
+  vertical-align:super;
+  margin-left: 0rpx;
+}
+
+.xuancai-wrap .list .item .price{
+  font-size:26rpx;
+  font-weight: 600;
+}
+
+.xuancai-wrap .list .item image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 24rpx 0;
+}
+
+.footer{
+  height: 98rpx;
+  box-shadow: 0 -5rpx 5rpx #e1e1e1;
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.map{
+  display: flex;
+  font-size: 30rpx;
+  color:#666;
+  align-items: center;
+}
+.map image{
+width: 40rpx;
+height: 40rpx;
+margin-right: 20rpx;
+}
+
+.total{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size:30rpx;
+}
+
+.total text{
+  line-height: 98rpx;
+  color:#d32f2e;
+  margin-right: 20rpx;
+  font-weight: 550;
+}
+
+.total navigator{
+  border:1rpx solid #ff6600;
+  line-height: 54rpx;
+  width: 220rpx;
+  border-radius: 54rpx;
+  color:#ff6600;
+  font-weight: 500;
+  background-color: #fff;
+  text-align: center;
+  margin-left: 10rpx;
+}

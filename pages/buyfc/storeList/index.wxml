@@ -1,0 +1,19 @@
+<view class="store-header">
+  <view class='tip'>为您匹配距离您工地最近的辅料服务店</view>
+  <view class='gd-info'>
+    <view class='left'>
+      <view class='t'>您的工地：</view>
+      <view class='c no-address'>泉州市晋江中骏四季花城</view>
+    </view>
+    <view class='right'>
+      <text>添加</text>
+      <view><image src="{{rightIcon}}"></image></view>
+    </view>
+  </view>
+</view>
+
+<view class='store-list'>
+  <block wx:for="{{storeList}}" wx:key="{{index}}">
+    <store-item></store-item>
+  </block>
+</view>

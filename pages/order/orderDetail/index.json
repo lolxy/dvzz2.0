@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "select-address":"/components/order/selectAddress/item",
+    "unit-order-info": "/components/order/unitOrderInfo/item"
+  }
+}

@@ -1,0 +1,91 @@
+.search-wrap{
+  height: 88rpx;
+  background-color: #fff;
+  overflow: hidden;
+  width: 100%;
+  padding: 15rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search{
+  height: 58rpx;
+  overflow: hidden;
+  display: flex;
+  flex:1;
+}
+
+.search .search-box{
+  background-color: #dedede;
+  border-radius: 58rpx;
+  overflow: hidden;
+  flex:1;
+  height: 100%;
+  display: flex;
+  padding: 0 20rpx 0 10rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.search .search-box image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 9rpx;
+}
+
+.search .search-box input{
+  flex:1;
+  color:#999;
+  font-size: 24rpx;
+  line-height: 58rpx;
+  height: 58rpx;
+}
+
+.search-wrap .btn{
+width: 120rpx;
+line-height: 58rpx;
+font-size: 30rpx;
+color:#ff6600;
+letter-spacing: 10rpx;
+text-align: center;
+}
+
+.placecss{
+  color:#999;
+  font-size: 24rpx;
+}
+
+.search-histroy{
+  padding: 20rpx;
+}
+
+.search-histroy .hd{
+  margin-bottom: 20rpx;
+  line-height: 50rpx;
+  color:#666;
+  font-size:30rpx;
+  font-weight: bold;
+}
+
+.search-histroy .bd{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-histroy .bd navigator{
+  margin: 10rpx;
+  flex-wrap: wrap;
+  height: 48rpx;
+  line-height: 48rpx;
+  padding: 0 20rpx;
+  border-radius: 48rpx;
+  font-size: 24rpx;
+  color:#666;
+  background-color: #dedede;
+}
+
+.search-histroy .bd navigator:hover{
+  background-color: #ff6600;
+  color:#fff;
+}

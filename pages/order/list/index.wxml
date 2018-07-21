@@ -1,0 +1,37 @@
+<!--pages/order/list/index.wxml-->
+<view class='container'>
+  <view class='head'>订单号：{{fReceiptNo}}</view>
+  <scroll-view class='order-wrap' scroll-y>
+  <view class='order_list' wx:for="{{DataList}}" wx:key="{{index}}">
+    <image class='order_pic' src="{{item.fUrl=='https://www.dovzs.com/upload/null'?defaltimg:item.fUrl}}"/>
+    <view class='order_list_item'>
+      <view class='order_list_lgrp'>
+        <view class='order_list_title'>{{index+1}}.{{item.fSpaceValue}}</view>
+        <view class='order_list_c'><block  wx:if="{{item.fMatName}}">{{item.fMatName}}</block></view>
+        <view class='order_list_c'><block  wx:if="{{item.fNorms}}">规格：{{item.fNorms}}</block></view>
+      </view>
+      <view class='order_list_rgrp'>
+        <view class='order_list_c'><span wx:if="{{item.fPrice}}">￥{{item.fPrice}}元</span></view>
+        <view class='order_list_c'><block  wx:if="{{item.fQuantity}}">x{{item.fQuantity}}</block></view>
+        <view class='order_list_c order_list_cs'><block  wx:if="{{item.fAmount}}">小计：<span>￥{{item.fAmount}}元</span></block></view>
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+  <view class='foot'>
+    <view class='foot_l_grp'>
+      <view wx:if="{{flag=='0'}}">
+        <image src="{{DelIcon}}"></image>
+        <view bindtap='DelOrder'>删除</view>
+      </view>
+    </view>
+    <view class='foot_r_grp'>
+      <view>合计:{{fAmount}}元</view>
+      <view wx:if="{{flag == 1||flag == 2 || flag==0}}">
+        <view class='btn foot_button' wx:if="{{flag == 0}}"  bindtap='payOrder' data-soid="{{item.fSaleOrderID}}" data-amount="{{fAmount}}">支付</view>
+        <view class='btn foot_button' wx:if="{{flag == 1}}" bindtap='ConfirmReceipt'>确认收货</view>
+        <view class='btn foot_button' wx:elif="{{flag == 2}}" bindtap='ToEvaluate' data-fid="{{item.fSaleOrderID}}">评价</view>
+      </view>
+    </view>
+  </view>
+</view>

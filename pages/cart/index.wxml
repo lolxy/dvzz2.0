@@ -1,0 +1,76 @@
+<view class="cart-wrapper">
+  <view class='cart-panel'>
+    <view class='cart-header'>
+      <view class='store-info'>
+        <checkbox-group>
+          <label class="checkbox">
+            <checkbox value="" checked="{{false}}"/>店铺名称店铺名称
+          </label>
+        </checkbox-group>
+      </view>
+      <view class='dellbox'>
+        <image src='{{dellIcon}}' class='icon'></image>
+      </view>
+    </view>
+    <view class='cart-body'>
+      <checkbox-group>
+        <view class='item'>
+          <label class="checkbox">
+            <checkbox value="" checked="{{false}}"/>
+          </label>
+          <view class='content'>
+            <batch-order></batch-order>
+          </view>
+        </view>
+      </checkbox-group>
+    </view>
+  </view>
+
+  <view class='cart-panel'>
+    <view class='cart-header'>
+      <view class='store-info'>
+        <checkbox-group>
+          <label class="checkbox">
+            <checkbox value="" checked="{{false}}"/>店铺名称店铺名称
+          </label>
+        </checkbox-group>
+      </view>
+      <view class='dellbox'>
+        <image src='{{dellIcon}}' class='icon'></image>
+      </view>
+    </view>
+    <view class='cart-body'>
+      <checkbox-group>
+        <view class='item' wx:for="{{[0,1]}}" wx:key="{{index}}">
+          <label class="checkbox">
+            <checkbox value="" checked="{{false}}"/>
+          </label>
+          <view class='content'>
+            <unit-order></unit-order>
+          </view>
+        </view>
+      </checkbox-group>
+    </view>
+  </view>
+</view>
+
+<view class='action-btnbox cart-action'>
+  <view class='selectbox'>
+    <checkbox-group>
+      <label class="checkbox">
+        <checkbox value="" checked="{{false}}"/>全选
+      </label>
+    </checkbox-group>
+    <view class='dell'>
+      <image src='{{dellIcon}}' class='icon'></image>
+    </view>
+  </view>
+
+  <view class='cartNum'>
+    <view class='numbox'>
+      <text class='total'>合计：12000元</text>
+      <text class='tip'>不含运费</text>
+    </view>
+    <view class='btn btn-warning'>提交</view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "add-item":  "/components/addItem/item",
+    "comfirm-modal": "/components/modal/item",
+    "tip-modal": "/components/tipModal/item"
+  }
+}

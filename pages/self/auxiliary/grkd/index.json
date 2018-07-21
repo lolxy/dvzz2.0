@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "select-brand": "/components/selectBrand/item"
+  }
+}

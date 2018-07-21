@@ -1,0 +1,50 @@
+<view class='modal' bindtap='colseModal'>
+  <view class='modal-wrap' catchtap='openModal'>
+    <view class='modal-head'>新增</view>
+    <view class='modal-body'>
+      <view class='form'>
+        <view class='form-group'>
+          <text>空间：</text>
+          <picker bindchange="bindPickerSpaceChange" range-key="{{'fValue'}}" value="{{spaceIndex}}" range="{{spaceList}}">
+            <view class="picker">
+              {{spaceList[spaceIndex].fValue?spaceList[spaceIndex].fValue:'请选择空间'}}
+              <image src="{{downIcon}}"></image>
+            </view>
+          </picker>
+        </view>
+
+        <view class='form-group'>
+          <text>位置：</text>
+           <picker bindchange="bindPickerPositionChange" range-key="{{'fValue'}}" value="{{positionIndex}}" range="{{positionList}}">
+            <view class="picker">
+              {{positionList[positionIndex].fValue?positionList[positionIndex].fValue:'请选择位置'}}
+              <image src="{{downIcon}}"></image>
+            </view>
+          </picker>
+        </view>
+
+        <view class='form-group'>
+          <text>单位：</text>
+           <picker bindchange="bindPickerUnitChange" range-key="{{'fValue'}}" value="{{unitIndex}}" range="{{unitList}}">
+            <view class="picker">
+              {{unitList[unitIndex].fValue?unitList[unitIndex].fValue:'请选择单位'}}
+              <image src="{{downIcon}}"></image>
+            </view>
+          </picker>
+        </view>
+
+        <view class='form-group'>
+          <text>数量：</text>
+          <view class='inputbox'>
+            <input type='number' placeholder='请输入数量' placeholder-class='placecss' bindinput="getNumber" value='{{num}}'></input>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <view class='modal-footer'>
+      <view class='btn' catchtap='colseModal'>取消</view>
+      <view class='btn submit' catchtap='submitForm'>确定</view>
+    </view>
+  </view>
+</view>

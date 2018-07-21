@@ -1,0 +1,19 @@
+<!--pages/detail/detail.wxml-->
+<view class='evaluate'>
+  <view class='ev-item' wx:for="{{evaluateList}}" wx:key="{{index}}">
+    <image src="{{item.fHeadUrl}}" class='photo'></image>
+    <view class='content'>
+      <view class='c-head'>
+        <text class='phone'>{{item.fPhoneNo}}</text>
+        <text>{{item.fDatetime}}</text>
+      </view>
+      <view class='c-info'>
+        {{item.fRateContent}}
+      </view>
+      <view class='imglist'>
+        <image src="{{img.fUrl}}" wx:for="{{item.picList}}" wx:for-item="img" wx:for-index="keys" wx:key="{{keys}}" data-arr="{{item.picList}}" data-url="{{img.fUrl}}" bindtap='onPreview'></image>
+      </view>
+    </view>
+  </view>
+  <view class='loaded' wx:if="{{hasMore}}">没有更多数据了！</view>
+</view>

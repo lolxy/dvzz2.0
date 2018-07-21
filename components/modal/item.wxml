@@ -1,0 +1,12 @@
+<!--components/common/modal/item.wxml-->
+<view class='modal-wrap' bindtap='colseModal'>
+  <view class='modal' catchtap='openModal'>
+    <view class='modal-content'>
+      <text>{{content}}</text>
+    </view>
+    <view class='modal-footer'>
+      <view class='comfirm' data-type='{{comfirmType}}' catchtap='confirm'>确定</view>
+      <view class='cance' catchtap='colseModal'>取消</view>
+    </view>
+  </view>
+</view>

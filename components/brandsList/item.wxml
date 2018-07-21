@@ -1,0 +1,12 @@
+<view class='brand-list' wx:if="{{brandList.length}}">
+  <view class='brand-item' wx:for="{{brandList}}" wx:key="{{index}}" wx:if="{{item.fBrandID}}" data-name="{{item.fBrandName}}" bindtap='gotoBrandGoodsList'>
+    <image src="{{item.fImageUrl?item.fImageUrl:loadImg}}" lazy-load='true'></image>
+    <view class='content'>
+      <view class='title'>{{item.fBrandName}}</view>
+      <view class='info'>
+        <text>{{item.fShopCityName}}</text>
+        <text>{{item.distance}}</text>
+      </view>
+    </view>
+  </view>
+</view>

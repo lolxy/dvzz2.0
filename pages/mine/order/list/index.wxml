@@ -1,0 +1,98 @@
+<view class="order-wrapper">
+  <view class='nav'>
+    <view class='item on'><text>全部</text></view>
+    <view class='item'><text>未付款</text></view>
+    <view class='item'><text>待发货</text></view>
+    <view class='item'><text>待评价</text></view>
+    <view class='item'><text>退货</text></view>
+  </view>
+
+  <view class='order-list has-footer'>
+    <checkbox-group>
+    <view class='item'>
+      <view class='v-header'>
+        <view class='order-id'>订单号：SD17080083</view>
+        <view class='status'>退货成功</view>
+      </view>
+      <view class='v-body'>
+        <!-- <label class="checkbox">
+          <checkbox value="" checked="{{false}}"/>
+        </label> -->
+        <view class='order-info'>
+          <batch-order></batch-order>
+        </view>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='v-header'>
+        <view class='order-id'>订单号：SD17080083</view>
+        <view class='status'>退货成功</view>
+      </view>
+      <view class='v-body'>
+        <label class="checkbox">
+          <checkbox value="" checked="{{false}}"/>
+        </label>
+        <view class='order-info'>
+          <unit-order-list-info></unit-order-list-info>
+        </view>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='v-header'>
+        <view class='order-id'>订单号：SD17080083</view>
+        <view class='status'>已发货</view>
+      </view>
+      <view class='v-body'>
+        <label class="checkbox">
+          <checkbox value="" checked="{{false}}"/>
+        </label>
+        <view class='order-info'>
+          <unit-order-list-info></unit-order-list-info>
+        </view>
+      </view>
+      <view class="v-footer">
+        <view class='btn btn-outline'>查看物流</view>
+        <view class='btn btn-warning'>确认收货</view>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='v-header'>
+        <view class='order-id'>订单号：SD17080083</view>
+        <view class='status'>已发货</view>
+      </view>
+      <view class='v-body'>
+        <label class="checkbox">
+          <checkbox value="" checked="{{false}}"/>
+        </label>
+        <view class='order-info'>
+          <unit-order-list-info></unit-order-list-info>
+        </view>
+      </view>
+      <view class="v-footer">
+        <view class='btn btn-warning'>评价</view>
+      </view>
+    </view>
+    </checkbox-group>
+  </view>
+</view>
+
+<view class='action-btnbox order-action'>
+  <view class='selectbox'>
+    <checkbox-group>
+      <label class="checkbox">
+        <checkbox value="" checked="{{false}}"/>全选
+      </label>
+    </checkbox-group>
+  </view>
+
+  <view class='orderNum'>
+    <view class='numbox'>
+      <text class='total'>合计：12000元</text>
+      <text class='tip'>不含运费</text>
+    </view>
+    <view class='btn btn-warning'>合并付款</view>
+  </view>
+</view>

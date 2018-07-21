@@ -1,0 +1,12 @@
+<!--pages/mine/drawing/index.wxml-->
+<view class='container'>
+  <view wx:if="{{totleimage}}">
+    <view class='cont_title'>原始结构图({{curretimg+1}}/{{totleimage}})</view>
+    <view bindtouchstart='StartF' bindtouchend='EndF'>
+      <image src='{{item.fPlanUrl}}' class="{{curretimg==index?'active':''}}" wx:for="{{ImgList}}" wx:key="{{index}}"/>
+    </view>
+  </view>
+  <view class='nodata' wx:else>
+    您还没有图纸记录！
+  </view>
+</view>

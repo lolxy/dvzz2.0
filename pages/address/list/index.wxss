@@ -1,0 +1,46 @@
+.address-list-wrap{
+  padding-bottom: 98rpx;
+}
+
+.address-list-wrap .item{
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding: 40rpx 20rpx;
+  display: flex;
+}
+
+.address-list-wrap .item .con{
+  flex:1;
+}
+
+.address-list-wrap .item .con .contact{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+
+.address-list-wrap .item .con .contact text{
+font-size:32rpx;
+color:#333;
+font-weight: 600;
+}
+
+.address-list-wrap .item .con .contact .on{
+  color:#ff6600;
+  margin-left: 20rpx;
+}
+
+.address-list-wrap .item .con .address{
+line-height: 42rpx;
+color:#666;
+font-size: 28rpx;
+}
+
+.address-list-wrap .item .edit{
+  width: 160rpx;
+  margin-left: 10rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end;
+}

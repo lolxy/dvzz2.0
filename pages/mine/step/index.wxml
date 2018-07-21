@@ -1,0 +1,24 @@
+<!--pages/mine/step/index.wxml-->
+<view class='container'style="background-color: #f5f5f5;">
+  <form bindsubmit="formSubmit">
+    <view class='form_cont'>
+      <image src="{{logopic}}" class='logo'/>
+      <view class='form_t'>绑定手机号：{{phone}}</view>
+      
+      <view class='form_grp' wx:if="{{IsNeed==1}}">
+        <input type='text' name="fPhoneNo" class="input_b {{isTap?'disabled':''}}" placeholder='请输入图片验证码' name="fCaptcha" value="{{fCaptcha}}" bindinput="checkimg" bindblur="checkedimg" disabled='{{isTap?true:false}}'/>
+        <image src="{{requestimg}}" class='identify' mode="aspectFit" bindtap="getcheckimg"/>
+      </view>
+      <view class='form_grp'>
+        <input type='number' name="fVerifyCode" value="{{fVerifyCode}}" class='input_b' placeholder='请输入短信验证码' bindinput='phonein' bindinput='phonein1'/>
+        <view class='normal-btn' bindtap='getyzm' wx:if="{{isVisible}}">获取验证码</view>
+        <view class='normal-btn disabled' wx:else>{{currentContent}}</view>
+      </view>
+      
+      <view class='form_f'>
+        <button class="btn" wx:if="{{IsShow==1}}" form-type="submit">提 交 绑 定</button>
+        <button class="btn enable}}" wx:else >提 交 绑 定</button>
+      </view>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,19 @@
+<view class='modal' bindtap='colseModal'>
+  <view class='modal-wrap' catchtap='openModal'>
+    <view class='modal-head'>
+       <view catchtap="selectAllItem">
+          <icon type="{{checkedAll ? 'success' : 'circle'}}"  size="18" color="#ff6600"></icon>全选
+        </view>
+        <text>复制</text>
+    </view>
+    <view class='modal-body'>
+      <view class="copy-item" wx:for="{{copyList}}" wx:key="{{index}}" catchtap="selectItem" data-checked="{{item.fSelectMatDetailID}}" data-index="{{index}}">
+          <icon type="{{item.checked ? 'success' : 'circle'}}"  size="18" color="#ff6600"></icon>{{item.fSpace}}
+      </view>
+    </view>
+    <view class='modal-footer'>
+      <view class='btn' catchtap='colseModal'>取消</view>
+      <view class='btn submit' catchtap='submitForm'>确定</view>
+    </view>
+  </view>
+</view>

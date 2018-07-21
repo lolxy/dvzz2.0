@@ -1,0 +1,256 @@
+/* 头部样式 */
+.header{
+  height: 338rpx;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.header .main-menu{
+  height: 160rpx;
+  white-space: nowrap;
+  border-bottom: 1rpx solid #dedede;
+}
+
+.header .main-menu .item view{
+  width: 160rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding:30rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  color:#666;
+}
+
+.header .main-menu .item view image{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: top;
+}
+
+.header .sub-menu{
+  height: 89rpx;
+  white-space: nowrap;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.header .sub-menu .item{
+  padding: 0 30rpx;
+}
+
+.header .sub-menu .item:first-child{
+  padding-left: 0;
+}
+
+.header .sub-menu .item view{
+  font-size: 25rpx;
+  color:#666; 
+  height: 69rpx;
+  position: relative;
+}
+
+.header .sub-menu .item .tit{
+  /* border-bottom: 5rpx solid #ff6600; */
+  padding-bottom:15rpx; 
+  height: 49rpx;
+  line-height: 50rpx;
+}
+
+.header .sub-menu .item .badge{
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 24rpx;
+  font-size: 18rpx;
+  color:#fff;
+  text-align: center;
+  line-height: 24rpx;
+  background-color: #d32f2e;
+  position: absolute;
+  top:0;
+  margin-left: 5rpx;
+}
+
+.header .item{
+  display: inline-block;
+}
+
+.header .sub-menu .item .tit.on,.header .main-menu .item text.on{
+  color:#ff6600;
+}
+
+.header .sub-menu .item .tit.on{
+  border-bottom: 5rpx solid #ff6600;
+}
+
+.body{
+  position: absolute;
+  top:358rpx;
+  bottom: 120rpx;
+  width: 100%;
+  overflow: hidden;
+}
+
+.table-header{
+  height: 88rpx;
+  display: flex;
+  background-color: #fff;
+  border-bottom:1rpx solid #d1d1d1;
+}
+
+.table-header text,.table-body .item view{
+  font-size: 24rpx;
+  color:#333;
+  font-weight: 450;
+  line-height: 88rpx;
+  text-align: center;
+  border-right:1rpx solid #d1d1d1;
+}
+
+.body .t3{
+  width: 170rpx;
+}
+
+.body .t1,.body .t4{
+  width: 108rpx;
+}
+
+.body .t2{
+  flex:1;
+}
+
+.table-header text.t4,.table-body .item .t4{
+  border-right:none;
+}
+
+.table-body{
+  position: absolute;
+  top:90rpx;
+  bottom:0rpx;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-list{
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-list .list{
+  background-color: #fff;
+}
+
+.table-body .item{
+  display: flex;
+  border-bottom:1rpx solid #d1d1d1;
+}
+
+.table-body .item view{
+  color:#666;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 80rpx;
+}
+
+.table-body .item .t1{
+  position: relative;
+}
+
+.table-body .item .t1 checkbox{
+  width: 100%;
+  height: 100%;
+}
+
+/*  重写 checkbox 样式  */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+   border-radius: 50%;/* 圆角 */
+   width: 35rpx; /* 背景的宽 */
+   height: 35rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border: none;
+   background: #ff6600;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 35rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 35rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 35rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   color:#fff; /* 对勾颜色 白色 */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(0.8);
+   -webkit-transform:translate(-50%, -50%) scale(0.8);
+}
+
+.table-body .item .t2{
+  font-size: 20rpx;
+  padding: 10rpx;
+  line-height: 36rpx;
+}
+
+.table-body .item:last-child{
+  border-bottom: none;
+}
+
+.footer{
+  height: 98rpx;
+  padding: 0 20rpx;
+  overflow: hidden;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 5rpx 0 10rpx rgba(148,151,154,0.35);
+  display: flex;
+}
+
+.footer .btn-box{
+  flex:1;
+  padding: 15rpx;
+}
+
+.footer .btn-box .btn{
+  width: 100%;
+  height: 68rpx;
+  line-height: 68rpx;
+}
+
+.btn{
+  text-align: center;
+  line-height: 55rpx;
+  font-size: 24rpx;
+  letter-spacing: 2rpx;
+  border-radius:9rpx;
+}
+
+.btn.btn-outline{
+  border: 1rpx solid #ff6600;
+  color:#ff6600;
+}
+
+.btn.btn-full{
+  border: 1rpx solid #ff6600;
+  background-color: #ff6600;
+  color:#ffffff;
+}
+
+.btn.btn-radius{
+  border-radius:68rpx;
+}

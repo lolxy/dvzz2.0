@@ -1,0 +1,4 @@
+<!--pages/self/piclink/index.wxml-->
+<view class='container'>
+  <image wx:for="{{itemlist}}" wx:key="{{index}}" src="{{item.picurl}}" bindtap='ToPicList' data-index="{{index+1}}" data-href="{{item.link}}"></image>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "添加新地址",
+  "usingComponents": {
+    "comfirm-modal": "/components/modal/item"
+  }
+}

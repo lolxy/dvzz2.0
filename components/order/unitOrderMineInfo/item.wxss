@@ -1,0 +1,72 @@
+.unit-wrapper{
+  padding: 20rpx;
+  display: flex;
+}
+
+.unit-wrapper .img{
+  width: 140rpx;
+  height: 140rpx;
+  border:1rpx solid #dedede;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+
+.unit-wrapper .content{
+  flex:1;
+  overflow: hidden;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+
+.unit-wrapper .content .base{
+  display: flex;
+  justify-content: space-between;
+}
+
+.unit-wrapper .content .base .leftbox{
+  flex:1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.unit-wrapper .leftbox navigator{
+  font-size:30rpx;
+  color:#333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height:50rpx;
+  display: block;
+}
+
+.unit-wrapper .leftbox text{
+  font-size:24rpx;
+  color:#666;
+  line-height: 45rpx;
+}
+
+.unit-wrapper .content .base .rightbox{
+  flex:1;
+  align-content: flex-end;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.unit-wrapper .rightbox text{
+  font-size:24rpx;
+  color:#666;
+  line-height: 50rpx;
+}
+
+.unit-wrapper .rightbox text.price,.unit-wrapper .rightbox text.sum text{
+  color:#d32f2e;
+}
+
+.unit-wrapper .rightbox text.sum{
+  font-size:24rpx;
+  color:#333333;
+}

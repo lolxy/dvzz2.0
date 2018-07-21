@@ -1,0 +1,46 @@
+.evaluate-wrap{
+  padding-top: 377rpx;
+}
+.evaluate-header{
+  height: 377rpx;
+  position: fixed;
+  top:0;
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+.e-header{
+  display: flex;
+  justify-content: space-between;
+  color:#666666;
+  height: 89rpx;
+  align-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 1rpx solid #dedede;
+}
+
+.e-header text{
+  font-size: 26rpx;
+}
+
+.e-header navigator{
+  font-size: 24rpx;
+  color:#666666;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  height: 88rpx;
+  padding-left: 20rpx;
+}
+
+.e-header image{
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: top;
+  margin-left: 10rpx;
+}

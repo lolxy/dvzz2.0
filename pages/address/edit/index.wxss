@@ -1,0 +1,59 @@
+.address-add-wrapper{
+  padding-bottom: 98rpx;
+}
+
+.address-add-wrapper .box{
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+
+.address-add-wrapper .dl{
+  display: flex;
+  height: 88rpx;
+  align-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+  border-bottom: 1rpx solid #dedede;
+}
+
+.address-add-wrapper .dl:last-child{
+  border-bottom:none;
+}
+
+.address-add-wrapper .dl .dt{
+  color:#333;
+  font-size:30rpx;
+  font-weight: bold;
+  max-width: 150rpx;
+}
+
+.address-add-wrapper .dl .dd{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex: 1;
+  color:#666;
+  font-size: 26rpx;
+}
+
+.address-add-wrapper .dl .dd input{
+  height: 80rpx;
+  font-size: 26rpx;
+  line-height: 80rpx;
+  width: 100%;
+}
+
+.default{
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.default text{
+  color:#333;
+  font-size:30rpx;
+  font-weight: bold;
+}

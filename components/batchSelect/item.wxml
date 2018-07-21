@@ -1,0 +1,37 @@
+<view class='batch-select-wrapper'>
+  <view class='table-body'>
+    <view class='scroll-list'>
+      <view class='item' wx:for="mainMenuList" wx:key="{{index}}">
+        <view class='title'>热水管</view>
+        <view class='content'>
+          <view class='sub-item' wx:for="mainMenuList" wx:for-item="elem" wx:for-index="elemIndex" wx:key="{{elemIndex}}">
+            <view class='name'>20*28(白)</view>
+            <view class='price'>
+              <view class='p1'>25.5元/捆</view>
+              <view class='p2'>
+                <text>日丰</text>
+                <text>￥240</text>
+              </view>
+            </view>
+            <view class='action'>
+              <view class='addplus'>
+                <view class='plus'>
+                  <image src="./images/plus.png" class='icon'></image>
+                </view>
+                <view class='input'>
+                  <input type="number"/>
+                </view>
+                <view class='reduce'>
+                  <image src="./images/reduce.png" class='icon'></image>
+                </view>
+              </view>
+              <view class='righticon'>
+                <image src="./images/right.png" class='icon'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

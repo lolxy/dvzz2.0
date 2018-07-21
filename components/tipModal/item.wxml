@@ -1,0 +1,13 @@
+<!--components/tipModal/item.wxml-->
+<view class='modal-wrap'>
+  <view class='mask' bindtap='closeModal'></view>
+  <view class='modal'>
+    <view class='modal-content'>
+      <text>暂无主材列项,无法预算</text>
+      <text>请预约量房</text>
+    </view>
+    <view class='modal-footer'>
+      <view class='comfirm' bindtap='closeModal'>确定</view>
+    </view>
+  </view>
+</view>

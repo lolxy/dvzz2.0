@@ -1,0 +1,51 @@
+<view class='cate-list-wrap' wx:if="{{currentCategory && currentCategory.data2.length}}">
+  <view class="cate-header {{!currentSubCategory.length?'main-border':''}}" wx:if="{{type !='fucai'}}">
+    <view class="main-cate">
+     <view class="item {{!code.currentCode2?'on':''}}" data-code="" bindtap="getCurrentCate">
+          <text>全部</text></view>
+        <block wx:for="{{currentCategory.data2}}" wx:key="{{index}}" wx:if="{{index <= 4}}">
+        <!-- <view class="item {{code.currentCode2 == item.fTypeCode2?'on':''}}" data-code="{{item.fTypeCode2}}" data-subcode="{{item.data3[0].fTypeCode}}" bindtap="getCurrentCate"> -->
+        <view class="item {{code.currentCode2 == item.fTypeCode2?'on':''}}" data-code="{{item.fTypeCode2}}" bindtap="getCurrentCate">
+          <text>{{item.fType2}}</text></view>
+        </block>
+    </view>
+    <view class="more {{!isShow?'open':''}}" bindtap='toggleMoreMenu' wx:if="{{moreList.length}}">
+      <image src="{{moreIcon}}"></image>
+    </view>
+  </view>
+<view class="cate-header {{!currentSubCategory.length?'main-border':''}}" wx:else>
+    <view class="main-cate main-cate-scroll">
+        <scroll-view class='cate-list' scroll-x='{{true}}'>
+        <view class="item {{!code.currentCode2?'on':''}}" data-code="" bindtap="getCurrentCate">
+          <text>全部</text></view>
+        <block wx:for="{{currentCategory.data2}}" wx:key="{{index}}">
+        <!-- <view class="item {{code.currentCode2 == item.fTypeCode2?'on':''}}" data-code="{{item.fTypeCode2}}" data-subcode="{{item.data3[0].fTypeCode}}" bindtap="getCurrentCate"> -->
+        <view class="item {{code.currentCode2 == item.fTypeCode2?'on':''}}" data-code="{{item.fTypeCode2}}" bindtap="getCurrentCate">
+          <text>{{item.fType2}}</text></view>
+        </block>
+        </scroll-view>
+    </view>
+    <view class='more filter' bindtap='actionSheetTap'>
+        <image src="{{filterIcon}}"></image>
+        <text>筛选</text>
+    </view>
+  </view>
+  <view class='sub-cate-list' wx:if="{{currentSubCategory.length}}">
+  <view class='cate-item'>
+  <view class="item {{!code.currentCode3?'on':''}}" data-code="" bindtap='getCurrentSubCat'>全部</view>
+  </view>
+    <view class='cate-item' wx:for="{{currentSubCategory}}" wx:key="{{index}}">
+       <view class="item {{code.currentCode3 == item.fTypeCode?'on':''}}" data-code="{{item.fTypeCode}}" bindtap='getCurrentSubCat'>{{item.fType3}}</view>
+    </view>
+  </view>
+
+  <view class='action-sheet' hidden="{{isShow}}">
+    <view class='moreList'>
+      <block wx:for="{{moreList}}" wx:key="{{index}}">
+          <!-- <view class="item {{code.currentCode2 == item.fTypeCode2?'on':''}}" data-code="{{item.fTypeCode2}}" data-subcode="{{item.data3[0].fTypeCode}}" bindtap="getCurrentCate"><text>{{item.fType2}}</text></view> -->
+          <view class="item {{code.currentCode2 == item.fTypeCode2?'on':''}}" data-code="{{item.fTypeCode2}}" bindtap="getCurrentCate"><text>{{item.fType2}}</text></view>
+      </block>
+    </view>
+    <view class='maskbg' catchtap='closeActionSheet'></view>
+  </view>
+</view>

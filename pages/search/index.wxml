@@ -1,0 +1,21 @@
+<view class='search-wrap'>
+  <view class='search'>
+    <view class='search-box'>
+      <image src="{{searchIcon}}"></image>
+      <input placeholder="搜索商品" placeholder-class="placecss" value='{{searchdata}}' confirm-type="search" bindinput="searchInput" bindconfirm="search"/>
+    </view>
+    <view class='btn' bindtap='search'>搜索</view>
+  </view>
+</view>
+
+<view class='search-histroy'>
+  <view class='hd'>历史搜索</view>
+  <view class='bd'>
+    <navigator url="#">20水管</navigator>
+    <navigator url="#">电线</navigator>
+    <navigator url="#">给水管</navigator>
+    <navigator url="#">下水管</navigator>
+    <navigator url="#">日丰20抗菌给水管</navigator>
+    <navigator url="#">毛刷</navigator>
+  </view>
+</view>

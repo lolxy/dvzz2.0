@@ -1,0 +1,111 @@
+.icon{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: top;
+}
+
+.photo{
+  width: 140rpx;
+  height: 140rpx;
+  vertical-align: top;
+  margin-right: 20rpx;
+}
+
+.store-header{
+  height: 269rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+
+.panel-body{
+  height: 180rpx;
+  border-bottom: 1rpx solid #dedede;
+  display: flex;
+  padding: 20rpx;
+}
+
+.panel-body .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex:1;
+}
+
+.panel-body .content .title{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  height: 30rpx;
+}
+
+.panel-body .content .title .tbox{
+  font-size: 28rpx;
+  color:#333;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.panel-body .content .title .badge{
+  padding: 0 10rpx;
+  color:#fff;
+  font-size: 20rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  background-color: #ff6600;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+
+.panel-body .content .title text{
+  font-size:24rpx;
+  color:#999;
+}
+
+.panel-body .content .scope{
+  display: flex;
+}
+
+.panel-body .content .scope .s{
+  padding: 5rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.panel-body .content .des{
+  font-size: 24rpx;
+  color:#666;
+}
+
+.panel-footer{
+  height: 88rpx;
+  display: flex;
+}
+
+.panel-footer view{
+  flex:1;
+  width: 50%;
+  box-sizing: border-box;
+  height: 88rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-size:26rpx;
+}
+
+.panel-footer view text{
+  margin-left: 10rpx;
+}
+
+.panel-footer .contact{
+  color:#03a9f5;
+  border-right: 1rpx solid #dedede;
+}
+
+.panel-footer .fav{
+  color:#ff6600;
+}

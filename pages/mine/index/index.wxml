@@ -1,0 +1,39 @@
+<view class='mine-index-wrapper'>
+  <view class='header-box'>
+    <image src="{{headerbg}}" class='headbg'></image>
+    <view class='set'>
+      <image src="{{setIcon}}" class='icon'></image>
+    </view>
+    <view class='base-info'>
+      <image src="{{photo}}" class='photo'></image>
+      <view class='name'>吕女士</view>
+      <view class='account'>账号：LV252154541</view>
+    </view>
+  </view>
+
+  <view class='mine-body'>
+    <view class='panel'>
+      <view class='panel-head'>
+        <view class='tit'>我的订单</view>
+        <navigator url="#"><text>查看全部订单</text><image src='{{rightIcon}}'></image></navigator>
+      </view>
+      <view class='panel-body'>
+        <view class='menu-list'>
+          <view class='menu-item' wx:for="{{menuList}}" wx:key="{{index}}">
+            <image src="{{item.icon}}"></image>
+            <text>{{item.title}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='panel'>
+      <view class='panel-head'>
+        <view class='tit'>我的资料</view>
+      </view>
+      <view class='panel-body'>
+
+      </view>
+    </view>
+  </view>
+</view>

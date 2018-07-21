@@ -1,0 +1,70 @@
+/* components/common/modal/item.wxss */
+/* 弹窗框 */
+.modal-wrap{
+  position: fixed;
+  top:0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,.5);
+  z-index: 100;
+}
+
+.modal-wrap .modal{
+  width:80%;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+}
+
+.modal .modal-content{
+  padding: 30rpx;
+  min-height: 180rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color:#333;
+  font-size:30rpx;
+}
+
+.modal .modal-content text{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size:32rpx;
+  color:#333;
+  font-weight: 500;
+}
+
+.modal .modal-footer{
+  border-top:1rpx solid #d1d1d1;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 30rpx;
+  display: flex;
+}
+
+.modal .modal-footer view{
+  flex:1;
+  width: 50%;
+  color:#999;
+  text-align: center;
+  line-height: 88rpx;
+}
+
+.modal .modal-footer view.cance{
+  color:#ff6600;
+  border-left: 1rpx solid #dedede;
+  box-sizing: border-box;
+}

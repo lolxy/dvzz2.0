@@ -1,0 +1,112 @@
+.modal{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.modal-wrap{
+  width: 580rpx;
+  max-height: 520rpx;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 15rpx;
+  box-shadow: 0 0 5rpx #5e5e5e;
+  padding-top: 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-head{
+  position: relative;
+  height: 88rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color:#333;
+  font-weight: 600;
+  border-bottom: 1rpx solid #dedede;
+}
+
+.modal-head view{
+  width: 120rpx;
+  height: 88rpx;
+  margin-left: 20rpx;
+  vertical-align: top;
+  color:#615e5c;
+  font-size: 26rpx;
+  position: relative;
+  z-index: 5;
+}
+
+.modal-head view icon{
+  margin: 17rpx 10rpx;
+  vertical-align: top;
+}
+
+.modal-head text{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-body{
+  padding: 20rpx 30rpx;
+  max-height: 300rpx;
+  overflow-y: auto;
+  display: flex;
+  align-items:flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.modal-body .copy-item{
+   width: 50%;
+  color:#615e5c;
+  font-size: 26rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden; 
+}
+
+.modal-body .copy-item.selected{
+  color:#ff6600;
+}
+
+.modal-body .copy-item icon{
+  vertical-align: top;
+  margin: 13rpx 10rpx;
+}
+
+.modal-footer{
+height: 86rpx;
+display: flex;
+align-content: center;
+align-items: center;
+font-size:30rpx;
+color:#999;
+border-top:1rpx solid #dedede;
+}
+
+.modal-footer .btn{
+  flex:1;
+  height: 100%;
+ display: flex;
+ align-content: center;
+ justify-content: center;
+ align-items: center;
+}
+
+.modal-footer .btn.submit{
+  border-left:1rpx solid #dedede;
+  color:#ff6600;
+}

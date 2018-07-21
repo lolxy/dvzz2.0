@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "辅料服务店",
+  "usingComponents": {
+    "store-item": "/components/storeItem/item"
+  }
+}

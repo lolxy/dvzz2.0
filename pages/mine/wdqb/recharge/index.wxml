@@ -1,0 +1,10 @@
+<!--pages/mine/wdqb/recharge/index.wxml-->
+<view class='container'>
+  <view class='header'>
+    <view class='charge_title'>充值金额</view>
+    <view class='charge_num'><view>¥</view> <input value='{{fAmount}}' bindblur='InputChange'></input>  </view>
+  </view>
+  <view class='cash_btngrp'>
+    <view class='btn cash_btn_hove' bindtap='ToPay'>微信支付</view>
+  </view>
+</view>

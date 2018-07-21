@@ -1,0 +1,86 @@
+.address-wrapper{
+  overflow: hidden;
+  background-color: #fff;
+}
+.address-wrapper .wrapper{
+  padding: 30rpx 20rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  min-height: 120rpx;
+}
+
+.address-wrapper .wrapper .area{
+  width: 50rpx;
+  height: 40rpx;
+}
+
+.address-wrapper .wrapper .area image{
+  width: 32rpx;
+  height: 40rpx;
+  vertical-align: top;
+}
+
+.address-wrapper .wrapper .right{
+  width: 50rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+  text-align: right;
+}
+
+.address-wrapper .wrapper .right image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: top;
+}
+
+.address-wrapper .wrapper .address-info{
+  flex:1;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.address-wrapper .wrapper .address-info .info{
+  flex:1;
+  font-size: 32rpx;
+  color:#333;
+}
+
+.address-wrapper .wrapper .address-info .nodata{
+  font-weight: bold;
+  font-size: 32rpx;
+  color:#333;
+  flex:1;
+}
+
+.address-wrapper .wrapper .address-info .info .contact{
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.address-wrapper .wrapper .address-info .info .address{
+  font-size:28rpx;
+  line-height: 42rpx;
+  color:#666;
+}
+
+.address-wrapper .wrapper .address-info .add{
+  width: 120rpx;
+  font-size: 26rpx;
+  line-height: 20rpx;
+  color:#ff6600;
+}
+
+.address-wrapper .borderbottom{
+  width: 750rpx;
+  height: 10rpx;
+}
+
+.address-wrapper .bdbg{
+  width: 750rpx;
+  height: 10rpx;
+  vertical-align: top;
+}

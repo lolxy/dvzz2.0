@@ -1,0 +1,18 @@
+<!--pages/mine/aftersale/index.wxml-->
+<view class='container'>
+  <view wx:if="{{datalist.length}}">
+  <block wx:for="{{datalist}}" wx:key="{{index}}">
+    <view class='cont_title'>
+      <view class='cont_title_name'>{{item.fValue}}</view>
+      <view class="cont_title_stat {{item.Status==0?'active':''}}'">{{item.Status==0?'保质期内':'过保质期'}}</view>
+    </view>
+    <view class='cont_body'>
+      <view>售后服务日期：</view>
+      <view>{{item.time}} 至 {{item.timeEnd}}</view>
+    </view>
+  </block>
+  </view>
+  <view class='nodata' wx:else>
+    您还没有任何的售后记录！
+  </view>
+</view>

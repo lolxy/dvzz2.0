@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mall-list": "/components/mallList/item",
+    "tip-modal": "/components/tipModal/item"
+  }
+}

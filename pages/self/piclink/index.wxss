@@ -1,0 +1,19 @@
+/* pages/self/piclink/index.wxss */
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 20rpx;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #f3f3f3;
+}
+.container image {
+  width: 100%;
+  height: 50%;
+}
+.container image + image {
+  margin-top: 20rpx;
+}

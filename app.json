@@ -1,0 +1,105 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/self/index/index",
+    "pages/self/station/index",
+    "pages/self/find/index",
+    "pages/self/finddetail/index",
+    "pages/self/aborprice/index",
+    "pages/self/piclink/index",
+    "pages/self/message/index",
+    "pages/self/piclist/index",
+    "pages/self/fclist/index",
+    "pages/self/auxiliary/orderlist/index",
+    "pages/self/auxiliary/grkd/index",
+    "pages/self/auxiliary/detail/index",
+    "pages/self/auxiliary/orderdetail/index",
+    "pages/main/index/index",
+    "pages/main/categories/index",
+    "pages/main/list/index",
+    "pages/main/detail/index",
+    "pages/main/evaluate/index",
+    "pages/main/budget/index/index",
+    "pages/main/budget/xuancai/index",
+    "pages/main/budget/bill/index",
+    "pages/main/budget/detail/index",
+    "pages/order/index/index",
+    "pages/order/list/index",
+    "pages/order/evaluate/index",
+    "pages/order/settlement/index",
+    "pages/mine/index/index",
+    "pages/mine/login/index",
+    "pages/mine/bind/index",
+    "pages/mine/step/index",
+    "pages/mine/suite/index",
+    "pages/mine/drawing/index",
+    "pages/mine/aftersale/index",
+    "pages/mine/wdqb/info/index",
+    "pages/mine/wdqb/recharge/index",
+    "pages/mine/wdqb/bill/index",
+    "pages/outlink/index",
+    "pages/buyfc/storeList/index",
+    "pages/buyfc/evaluate/index",
+    "pages/buyfc/fclist/index",
+    "pages/buyfc/selectbrand/index",
+    "pages/buyfc/batchbuy/index",
+    "pages/buyfc/batchadd/index",
+    "pages/detail/index",
+    "pages/search/index",
+    "pages/order/comfirm/index",
+    "pages/order/orderDetail/index",
+    "pages/address/list/index",
+    "pages/address/add/index",
+    "pages/address/edit/index",
+    "pages/address/select/index",
+    "pages/cart/index",
+    "pages/mine/order/list/index",
+    "pages/mine/order/detail/index",
+    "pages/work/index/index",
+    "pages/customize/index/index",
+    "pages/soft/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff6600",
+    "navigationBarTitleText": "多维自装商城",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#ff6600",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/icon_home_active.png",
+        "iconPath": "images/icon_home.png",
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/icon_budget_active.png",
+        "iconPath": "images/icon_budget.png",
+        "pagePath": "pages/main/budget/index/index",
+        "text": "预算"
+      },
+      {
+        "selectedIconPath": "images/icon_work_active.png",
+        "iconPath": "images/icon_work.png",
+        "pagePath": "pages/work/index/index",
+        "text": "工地"
+      },
+      {
+        "selectedIconPath": "images/icon_cart_active.png",
+        "iconPath": "images/icon_cart.png",
+        "pagePath": "pages/cart/index",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "images/icon_user_active.png",
+        "iconPath": "images/icon_user.png",
+        "pagePath": "pages/mine/index/index",
+        "text": "我的"
+      }
+    ]
+  }
+}

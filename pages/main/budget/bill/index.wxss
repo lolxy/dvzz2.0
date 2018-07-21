@@ -1,0 +1,221 @@
+/* pages/main/budget/index/index.wxss */
+.containers{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.nav{
+  height: 220rpx;
+  background-color: #fff;
+  position: absolute;
+  overflow: hidden;
+  top:0;
+  width: 100%;
+}
+
+.nav .menus{
+  width: 100%;
+  display: flex;
+  border-bottom: 1rpx solid #dedede;
+} 
+
+.nav .menus .item{
+  width: 50%;
+  height: 130rpx;
+  padding: 20rpx; 
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.nav .menus .item .item-wrap{
+  width: 150rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+
+.nav .menus .item text{
+  color:#666;
+  font-size:26rpx;
+}
+
+.nav .menus .item text.tit{
+  font-size:30rpx;
+  margin-bottom: 5rpx;
+}
+
+.nav .menus .item.on .item-wrap{
+  border-bottom: 5rpx solid #FF6600;
+}
+
+.nav .menus .item.on text{
+  color:#ff6600;
+}
+
+.nav .menu-sub{
+  width: 100%;
+  white-space: nowrap;
+} 
+
+.nav .menu-sub .item{
+  height: 90rpx;
+  display: inline-block;
+  line-height: 85rpx;
+  font-size: 26rpx;
+  color:#666;
+  text-align: center;
+  padding: 0 30rpx;
+}
+
+.nav .menu-sub .item text.on{
+  color:#ff6600;
+}
+
+.nav .menu-sub .item text.on{
+  border-bottom: 5rpx solid #ff6600;
+  padding-bottom: 12rpx;
+}
+
+.xuancai-wrap{
+  background-color: #fff;
+  position: absolute;
+  top:240rpx;
+  bottom: 129rpx;
+  overflow: hidden;
+  width: 100%;
+}
+
+.x-header{
+  border-bottom: 1rpx solid #dedede;
+  height: 88rpx;
+  line-height: 68rpx;
+  font-size: 30rpx;
+  color:#333;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.x-header .th{
+  flex:1;
+  padding: 10rpx;
+  font-size: 24rpx;
+  color:#333;
+  font-weight: bold;
+  text-align: center;
+  border-right:1rpx solid #dedede;
+}
+
+.x-header .th:last-child,.xuancai-wrap .list .item .td:last-child{
+  border-right:none;
+}
+
+.x-header .flex2,.xuancai-wrap .list .item .td.flex2{
+  flex:1.5;
+}
+
+.xuancai-wrap .list .item .td.flex2.guige{
+  display: flex;
+  flex-direction: column;
+}
+
+.xuancai-wrap .list{
+  position: absolute;
+  top:88rpx;
+  bottom:0;
+  width: 100%; 
+}
+
+.xuancai-wrap .list .item{
+width: 100%;
+min-height: 88rpx;
+display: flex;
+box-sizing: border-box;
+border-bottom: 1rpx solid #dedede;
+font-size: 24rpx;
+line-height: 44rpx;
+color:#666;
+}
+
+.xuancai-wrap .list .item .td{
+  flex:1;
+  text-align: center;
+  border-right:1rpx solid #dedede;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx;
+}
+
+.xuancai-wrap .list .item .namebox{
+  flex:1;
+  border-right:1rpx solid #dedede;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.xuancai-wrap .list .item .namebox .name{
+  text-align: center;
+  word-break:normal;
+  white-space:normal;
+}
+
+.xuancai-wrap .list .item .namebox .brand{
+  font-size:20rpx;
+}
+
+.xuancai-wrap .list .item .specbox{
+  flex:5.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.xuancai-wrap .specbox .spec-list{
+  display: flex;
+  flex: 1;
+  min-height: 88rpx;
+  border-bottom: 1rpx solid #dedede;
+}
+
+.xuancai-wrap .specbox .spec-list:last-child{
+  border-bottom:none;
+}
+
+.footer{
+  height: 98rpx;
+  box-shadow: 0 -5rpx 5rpx #e1e1e1;
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content:flex-end;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.total{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size:30rpx;
+}
+
+.total text{
+  line-height: 98rpx;
+  color:#d32f2e;
+  margin-right: 20rpx;
+  font-weight: 550;
+}

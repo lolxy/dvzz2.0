@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "多维辅材商城",
+  "usingComponents": {
+    "search-box": "/components/searchBox/item",
+    "sub-cate-list":"/components/subCateList/item",
+    "product-list":"/components/productList/item",
+    "brands-list": "/components/brandsList/item",
+    "filter-action-sheet":"/components/filter/item"
+  }
+}

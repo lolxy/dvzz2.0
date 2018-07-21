@@ -1,0 +1,51 @@
+/* pages/list/index.wxss */
+.containers{
+  height: 100%;
+}
+.list-fixed{
+  position: fixed;
+  width: 100%;
+  height: 88rpx;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.cate-container{
+position: absolute;
+top:88rpx;
+bottom:98rpx;
+background-color: #f3f3f3;
+}
+
+.loaded{
+  color:#999999;
+  font-size:24rpx;
+  line-height: 40rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.banth-add-order{
+  position: fixed;
+  bottom:0;
+  height: 99rpx;
+  left: 0;
+  width: 100%;
+  padding: 15rpx 20rpx;
+  box-sizing: border-box;
+  box-shadow: -2rpx -2rpx 5rpx #e2e2e2;
+  background-color: #fff;
+}
+
+.banth-add-order button{
+  font-size:32rpx;
+  color:#fff;
+  background-color: #ff6600;
+  border-radius: 68rpx;
+  height: 68rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 68rpx;
+}
+

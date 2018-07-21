@@ -1,0 +1,14 @@
+<view class="unit-wrapper">
+  <view class='img'>
+    <image src="{{imgurl}}"></image>
+  </view>
+  <view class='content'>
+    <navigator url='#'>
+      高清有线电视线信号线纯铜同轴线高清有线电视线信号线纯铜同轴线高清有线电视线信号线纯铜同轴线
+    </navigator>
+    <view class='attr'>
+      <text>￥65元/卷</text>
+      <view class='num'>×10</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+
+<view class='container'>
+  <view class='list' wx:for="{{BillList}}" wx:key="{{index}}">
+    <view>
+      <view class='item_name'>{{item.fMatName}}</view>
+      <view class='item_time'>{{item.fFIDate}}</view>
+    </view>
+    <view class='item_price'>{{item.fAmount}}元</view>
+  </view>
+</view>

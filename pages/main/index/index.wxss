@@ -1,0 +1,230 @@
+/**index.wxss**/
+.containers{
+  background-color: #f3f3f3;
+}
+
+.customer-top{
+  width: 100%;
+  background-color: #fff;
+}
+
+.customer-banner,swiper-item,.customer-top .slide-image{
+  width: 100%;
+}
+
+.index_head {
+  height: 88rpx;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding:24rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.local {
+  line-height: 40rpx;
+  display: inline-block;
+}
+
+.local .local-icon {
+  width: 19rpx;
+  height: 26rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.local .down-icon{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 20rpx;
+  margin-top: 6rpx;
+  vertical-align: top;
+}
+
+.local  picker {
+  display: inline-block;
+}
+
+.local .picker {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #666;
+}
+
+.index_icongrp {
+  display: inline-block;
+  line-height: 40rpx;
+}
+
+.index_icongrp image {
+  width: 34rpx;
+  height: 34rpx;
+  margin-left: 30rpx;
+  vertical-align: middle;
+}
+
+/* 轮播图模块 */
+.swriper-contains{
+  width: 100%;
+  height: 360rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.swriper-contains swiper,.swriper-contains swiper image{
+  height: 360rpx;
+}
+
+/* 首页菜单 */
+.menu{
+  display: flex;
+  background-color: #fff;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+}
+
+.menu-item{
+  width: 25%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.menu-item image{
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.menu-item text{
+  font-size: 28rpx;
+  color:#666;
+  margin-top: 15rpx;
+}
+
+.lanmu{
+  height: 360rpx;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.lanmu .main{
+  width: 360rpx;
+  box-sizing: border-box;
+  border-right: 1rpx solid #dedede;
+  overflow: hidden;
+}
+
+.lanmu .main image{
+  width: 360rpx;
+  height: 360rpx;
+}
+
+.lanmu .submain{
+  display: flex;
+  width: 390rpx;
+  flex-direction: column;
+}
+
+.lanmu .submain view.sitem{
+  height: 180rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.lanmu .submain view.sitem:first-child{
+    border-bottom: 1rpx solid #dedede;
+}
+
+.lanmu .submain view.sitem image{
+  width: 390rpx;
+  height: 180rpx;
+}
+
+/* 推荐模块 */
+.recom-list{
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+
+.recom-list .recom{
+  display: flex;
+  height: 98rpx;
+  border-bottom: 1rpx solid #dedede;
+  line-height: 98rpx;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.recom-list .recom image{
+  width: 31rpx;
+  height: 28rpx;
+  margin: 35rpx 12rpx;
+}
+
+.recom-list .recom text{
+  color:#ff6600;
+  font-size: 28rpx;
+}
+
+/* 弹窗框 */
+.modal-wrap{
+  position: fixed;
+  top:0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.modal-wrap .mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,.5);
+}
+
+.modal-wrap .modal{
+  width:80%;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+}
+
+.modal .modal-content{
+  padding: 30rpx;
+  min-height: 180rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color:#333;
+  font-size:30rpx;
+}
+
+.modal .modal-content text{
+  flex:1;
+}
+
+.modal .modal-footer{
+  border-top:1rpx solid #d1d1d1;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color:#ff6600;
+}

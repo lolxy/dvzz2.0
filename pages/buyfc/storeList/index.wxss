@@ -1,0 +1,81 @@
+.store-header{
+  width: 100%;
+  height: 177rpx;
+  background-color: #fff;
+  position: fixed;
+  top:0;
+  left: 0;
+  overflow: hidden;
+}
+
+.store-header .tip{
+  height: 88rpx;
+  border-bottom: 1rpx solid #dedede;
+  font-size: 28rpx;
+  color:#ff6600;
+  text-align: center;
+  line-height: 88rpx;
+}
+
+.store-header .gd-info{
+  display: flex;
+  height: 88rpx;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.store-header .gd-info .left{
+  flex:1;
+  display: flex;
+  font-size: 28rpx;
+  color:#333;
+  align-content: center;
+  align-items: center;
+}
+
+.store-header .t{
+  width: 140rpx;
+}
+
+.store-header .c{
+  flex:1;
+}
+
+.store-header .c.no-address{
+  color:#999;
+}
+
+.store-header .gd-info .right{
+  width: 140rpx;
+  margin-left: 10rpx;
+  display: flex;
+}
+
+.store-header .gd-info .right text{
+  flex:1;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 26rpx;
+  color:#ff6600;
+}
+
+.store-header .gd-info .right view{
+  width: 30rpx;
+  height: 88rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-header .gd-info .right view image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: top;
+}
+
+.store-list{
+  margin-top: 197rpx;
+}

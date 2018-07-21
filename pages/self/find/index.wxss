@@ -1,0 +1,88 @@
+/* pages/self/find/index.wxss */
+@import '../../../style/common.wxss';
+.container{
+  padding-top:190rpx;
+}
+.fixed-box{
+  position: fixed;
+  width: 100%;
+  height: 190rpx;
+  top:0;
+  left:0;
+}
+.searchgrp {
+  width: 100%;
+  padding: 16rpx 30rpx;
+  background-color: #ff6600;
+}
+.search-item {
+  width: 100%;
+  height: 60rpx;
+  border-radius: 30rpx;
+  background-color: #ffffff;
+}
+.search-item input {
+  height: 100%;
+  padding: 0 1em;
+  text-align: center;
+  font-size: 28rpx;
+}
+.typelist {
+  width: 100%;
+  margin-bottom: 20rpx;
+  padding: 10rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+}
+.typelist  view {
+  font-size: 28rpx;
+  line-height: 60rpx;
+  color: #999999;
+  border-bottom-width: 4rpx;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+}
+.typelist  view.active {
+  color: #ff6600;
+  border-bottom-color: #ff6600;
+}
+.find_lst {
+  width:100%;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: #ffffff;
+  border-bottom: 2rpx solid #ddd;
+}
+.find_item_pic {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 50rpx;
+  border-radius: 8rpx;
+}
+
+.sec_item{
+  flex:1;
+  margin-left:20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sec_item view {
+  font-size: 28rpx;
+  flex:1;
+  min-width: 50%;
+  color: #333333;
+}
+
+.no-data{
+  line-height: 80rpx;
+  text-align: center;
+  color:#666666;
+  font-size: 24rpx;
+}

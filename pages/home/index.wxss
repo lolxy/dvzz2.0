@@ -1,0 +1,252 @@
+/**self/index.wxss**/
+@import '../../style/common.wxss';
+.container {
+  background-color: #f3f3f3;
+}
+.index_head {
+  width:100%;
+  height: 88rpx;
+  padding: 15rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top:0rpx;
+  z-index: 1;
+}
+.local {
+  line-height: 30rpx;
+  display: flex;
+}
+.local .localicon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+  vertical-align: top;
+}
+.down-icon{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+  vertical-align: top;
+}
+.local picker {
+  display: inline-block;
+}
+.local .picker {
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: #ffffff;
+}
+.index_icongrp {
+  display: inline-block;
+  line-height: 40rpx;
+}
+.index_icongrp image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+
+.search-box{
+  background-color: #fff;
+  border-radius: 58rpx;
+  overflow: hidden;
+  flex:1;
+  margin-left: 20rpx;
+  margin-right:10rpx;
+  height: 100%;
+  display: flex;
+  padding: 0 20rpx 0 10rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.search-box image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 9rpx;
+}
+
+.search-box input{
+  flex:1;
+  color:#999;
+  font-size: 24rpx;
+  line-height: 58rpx;
+  height: 58rpx;
+}
+
+.customer-top{
+  width: 100%;
+  background-color: #fff;
+}
+
+.customer-banner {
+  width: 750rpx;
+  height: 360rpx;
+}
+
+swiper-item {
+  width: 750rpx;
+  height: 360rpx;
+}
+
+.customer-top .slide-image {
+  width: 750rpx;
+  height: 360rpx;
+}
+
+.mainmenulist {
+  width: 100%;
+  border-bottom: 1rpx solid #dedede;
+  padding:20rpx 15rpx;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #ffffff;
+}
+.mainmenulist image {
+  width: 120rpx;
+  height: 120rpx;
+}
+.mainmenulist .linkname {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #666666;
+  text-align: center;
+}
+
+/* 子菜单 */
+
+.submenulist{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding:15rpx 10rpx 5rpx;
+  margin-bottom: 20rpx;
+}
+
+.submenulist .item{
+  width: 20%;
+  padding: 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 120rpx;
+  margin-bottom: 10rpx;
+}
+
+.submenulist .item .linkimg{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.submenulist .item .linkname{
+  font-size: 24rpx;
+  color:#666;
+  margin-top: 10rpx;
+  line-height: 36rpx;
+}
+
+/* 用户信息 */
+.user-panel{
+  background-color: #fff;
+}
+
+.user-panel .user-panel-header{
+  height: 88rpx;
+  border-bottom: 1rpx solid #dedede;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.user-panel .user-panel-header text{
+font-size: 28rpx;
+color:#ff6600;
+}
+
+.user-panel .user-panel-header .btn{
+  width: 150rpx;
+  height: 48rpx;
+  border: 1rpx solid #ff6600;
+  text-align: center;
+  line-height: 48rpx;
+  border-radius: 6rpx;
+  font-size: 22rpx;
+  color:#ff6600;
+}
+
+.user-panel-body{
+  display: flex;
+  padding: 0 20rpx;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.user-panel-body .item{
+  display: flex;
+  font-size: 24rpx;
+  color:#666;
+  height: 110rpx;
+  align-content: center;
+  align-items: center;
+}
+
+.user-panel-body .item image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.user-panel-body .item text{
+  margin-left: 10rpx;
+}
+
+/* 推荐专题 */
+.recom{
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recom navigator image{
+  width: 345rpx;
+  height: 220rpx;
+  vertical-align: top;
+}
+
+/* 推荐模块 */
+.recom-list{
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+
+.recom-list .recom{
+  display: flex;
+  height: 98rpx;
+  border-bottom: 1rpx solid #dedede;
+  line-height: 98rpx;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.recom-list .recom image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 24rpx 12rpx;
+}
+
+.recom-list .recom text{
+  color:#ff6600;
+  font-size: 28rpx;
+}

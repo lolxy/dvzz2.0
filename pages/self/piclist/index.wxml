@@ -1,0 +1,12 @@
+<!--pages/self/piclist/index.wxml-->
+<view class="container">
+  <scroll-view class='typelist' scroll-x='{{true}}' style="width: 100%">
+    <view class="{{index==currenttab?'active':''}}"  wx:for="{{tabs}}" data-fcode='{{item.fCode}}' wx:key="{{index}}" data-index="{{index}}" bindtap='TabsChange'>{{item.fValue}}</view>
+  </scroll-view>
+  <view class='piclist'>
+    <view class='picitem' wx:for="{{piclist}}" wx:key="{{index}}">
+      <image src="{{item.fUrl}}" bindtap='PicView' data-url="{{item.fUrl}}"/>
+      <view>{{item.fValue}}</view>
+    </view>
+  </view>
+</view>

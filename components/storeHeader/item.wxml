@@ -1,0 +1,33 @@
+<view class="store-header">
+  <view class='panel-body'>
+    <image src="{{photo}}" class='photo'></image>
+    <view class='content'>
+      <view class='title'>
+        <view class='tbox'><view class='badge'>自营</view>晋江中骏店</view>
+        <text>2.6km</text>
+      </view>
+      <view class='scope'>
+        <block wx:for="scope" wx:key="index">
+          <view class='s' wx:if="{{index < 3}}">
+            <image src='{{scopeIcon}}' class='icon'></image>
+          </view>
+          <view class='s' wx:else>
+            <image src='{{nscopeIcon}}' class='icon'></image>
+          </view>
+        </block>
+      </view>
+      <view class='des'>地址：泉州市晋江市御江帝景320号泉州市晋江市御江帝景320号</view>
+    </view>
+  </view>
+  <view class='panel-footer'>
+    <view class='contact'>
+      <image src='{{contactIcon}}' class='icon'></image>
+      <text>联系</text>
+    </view>
+
+    <view class='fav'>
+      <image src='{{favIcon}}' class='icon'></image>
+      <text>收藏</text>
+    </view>
+  </view>
+</view>

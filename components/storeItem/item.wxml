@@ -1,0 +1,33 @@
+<view class="store-item">
+  <view class='panel-body'>
+    <image src="{{photo}}" class='photo'></image>
+    <view class='content'>
+      <view class='title'>
+        <view class='tbox'><view class='badge'>自营</view>晋江中骏店</view>
+        <text>2.6km</text>
+      </view>
+      <view class='scope'>
+        <block wx:for="scope" wx:key="index">
+          <view class='s' wx:if="{{index < 3}}">
+            <image src='{{scopeIcon}}' class='icon'></image>
+          </view>
+          <view class='s' wx:else>
+            <image src='{{nscopeIcon}}' class='icon'></image>
+          </view>
+        </block>
+      </view>
+      <view class='des'>配送工地：46个</view>
+    </view>
+  </view>
+  <view class='panel-footer'>
+    <navigator url='/pages/buyfc/fclist/index?code1=F' class='buy'>
+      <image src='{{buyIcon}}' class='icon'></image>
+      <text>购买</text>
+    </navigator>
+
+    <navigator url='/pages/buyfc/evaluate/index' class='pingjia'>
+      <image src='{{pjIcon}}' class='icon'></image>
+      <text>评价</text>
+    </navigator>
+  </view>
+</view>

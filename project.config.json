@@ -1,0 +1,191 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.0",
+	"appid": "wx5d6a6e22ab9f16fe",
+	"projectname": "%E5%A4%9A%E7%BB%B4%E8%87%AA%E8%A3%85%E5%95%86%E5%9F%8E2.0",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "内页模式",
+					"pathName": "pages/order/list",
+					"query": "fSaleOrderID=ff808081616e748101616f0742f0000a"
+				},
+				{
+					"id": 1,
+					"name": "内页模式",
+					"pathName": "pages/mine/bind",
+					"query": "fSaleOrderID=ff808081629f2a6401629f6f75c3001b&fTypeCategory=开关面板"
+				},
+				{
+					"id": -1,
+					"name": "评价",
+					"pathName": "pages/order/evaluate",
+					"query": "fSaleOrderID=ff808081616e748101616f0742f0000a"
+				},
+				{
+					"id": -1,
+					"name": "预算详情页",
+					"pathName": "pages/main/budget/detail/index",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "预算详情页2",
+					"pathName": "pages/main/budget/detail1/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "游客体验",
+					"pathName": "pages/main/budget/index/index",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "选材明细页",
+					"pathName": "pages/main/budget/detail/index",
+					"query": "id=ff8080815ef66b26015f0a52c5ab1726&title=联捷LDY8012亚马逊"
+				},
+				{
+					"id": 7,
+					"name": "选材商品详情",
+					"pathName": "pages/main/detail/index",
+					"query": "id=997A55F3351640E8BF212708622FB19B&displayType=budget"
+				},
+				{
+					"id": 8,
+					"name": "商城商品详情",
+					"pathName": "pages/detail/index",
+					"query": "id=011A37F8F6FA46B3A9367F15D6C6D85F&displayType=fucai"
+				},
+				{
+					"id": 9,
+					"name": "充值页面",
+					"pathName": "pages/mine/wdqb/recharge/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "买辅材首页",
+					"pathName": "pages/buyfc/storeList/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "店铺评价页",
+					"pathName": "pages/buyfc/evaluate/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "买辅材列表页",
+					"pathName": "pages/buyfc/fclist/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索页面",
+					"pathName": "pages/search/index",
+					"query": ""
+				},
+				{
+					"id": 14,
+					"name": "确认订单页面",
+					"pathName": "pages/order/comfirm/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单详情页面",
+					"pathName": "pages/order/orderDetail/index",
+					"query": ""
+				},
+				{
+					"id": 16,
+					"name": "选品牌",
+					"pathName": "pages/buyfc/selectbrand/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "批量下单",
+					"pathName": "pages/buyfc/batchbuy/index",
+					"query": ""
+				},
+				{
+					"id": 18,
+					"name": "批量新增",
+					"pathName": "pages/buyfc/batchadd/index",
+					"query": "displayType=fucai"
+				},
+				{
+					"id": 19,
+					"name": "收货地址新增列表",
+					"pathName": "pages/address/edit/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "选择地址列表",
+					"pathName": "pages/address/select/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/cart/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单管理列表",
+					"pathName": "pages/mine/order/list/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的订单详情",
+					"pathName": "pages/mine/order/detail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的页面",
+					"pathName": "pages/mine/index/index",
+					"query": ""
+				}
+			]
+		}
+	}
+}

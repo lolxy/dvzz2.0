@@ -1,0 +1,25 @@
+<!--pages/self/finddetail/index.wxml-->
+<view class="container">
+  <view class='fdhead'>
+    <image src='{{detail.fPhoto}}' class='UPhoto'/>
+    <view>
+      <view class='fd_title'>
+        <view>姓名：{{detail.fEmployName}}</view>
+        <view>工龄：{{detail.fYear}}年</view>
+      </view>
+      <view class='fd_phone'>电话：{{detail.fMobile}}</view>
+      <view class='fd_discript'>{{discript}}</view>
+    </view>
+  </view>
+  <view class='scorll_titles'>
+    <image src='{{uphoto}}'/>
+    <view>工地直播</view>
+  </view>
+  <view class='scorll_list'>
+    开发中，敬请期待！
+  </view>
+
+  <view class='contact-box'>
+    <view class='btn' bindtap='contact' data-phone="{{detail.fMobile}}"> 联系工人 </view>
+  </view>
+</view>

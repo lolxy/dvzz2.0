@@ -1,0 +1,22 @@
+<view class="select-address-wrap">
+  <view class='selectHead'>
+    <view class='local'>
+      <image src='{{LocalImage}}' class='localicon'></image>
+      <picker mode = "selector" bindchange="cityChange" value="0" range="{{citylist}}" range-key="fValue">
+        <view class="picker">
+          {{currentCity}}<image class='down-icon' src="{{downIcon}}"></image>
+        </view>
+      </picker>
+    </view>
+    <view class='search-box'>
+      <image src="{{searchIcon}}"></image>
+      <input placeholder="请输入收货地址" placeholder-class="placecss" value='{{searchdata}}' confirm-type="search" bindinput="searchInput" bindconfirm="search"/>
+    </view>
+  </view>
+
+  <view class='address-list'>
+    <view class='item' wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,2,3,6,5,4,5,5]}}" wx:key="{{index}}">
+      中骏世纪花城
+    </view>
+  </view>
+</view>

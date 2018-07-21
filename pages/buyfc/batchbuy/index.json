@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "批量下订单",
+  "usingComponents": {
+    "batch-select": "/components/batchSelect/item"
+  }
+}

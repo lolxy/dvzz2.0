@@ -1,0 +1,79 @@
+<!--pages/self/auxiliary/orderlist/index.wxml-->
+<view class='container' style="padding-bottom: 100rpx;">
+  <view class='head'>
+    <view class='order_tabs' bindtap='jumpToOrderDetail'>
+      <image src="{{grkdIcon}}"/>
+      <view>工人开单</view>
+    </view>
+    <view class='order_tabs' bindtap='jumpToMallList'>
+      <image src="{{fcmallIcon}}"/>
+      <view>辅材商城</view>
+    </view>
+  </view>
+  <view class='typelist'>
+    <view class="{{item.type === flag?'active':''}}" wx:for="{{statusList}}" wx:key="{{index}}" data-flag="{{item.type}}" bindtap='ChangeFlags'><text>{{item.name}}</text></view>
+  </view>
+  <view wx:if="{{fCustomerID}}">
+  <checkbox-group class="order_list {{OrderList.length > 0 && flag === 0 ? 'pb125':''}}" bindchange="checkboxChange">
+    <view class='order_item' wx:for="{{OrderList}}" wx:key="{{index}}">
+      <view bindtap='ToList' data-fid="{{item.fSaleOrderID}}" data-item="{{item.fTypeCategory}}" data-receipt="{{item.fReceiptNo}}" data-usr="{{userInfo.fUserID}}">
+      <view class='order_item_head'>
+        <view>{{item.fCustomerName}}</view>
+        <view>{{item.fState}}</view>
+      </view>
+      <view class='order_item_body'>
+        <view>
+          <label class="checkbox" wx:if="{{flag===0}}" catchtap='stopNavigater'>
+            <checkbox value="{{index}}" checked="{{item.Selected}}" color="#ff6600"/>
+          </label>
+          <image class='order_item_img' src="{{item.fUrl || loadimg}}"/>
+          <view class='order_item_grp'>
+            <view class='order_item_name'>{{item.fTypeCategory}}</view>
+            <view class='order_item_totle'>合计：{{item.fAmount?item.fAmount:0}}元</view>
+          </view>
+        </view>
+        <view>
+          <view >
+            <view class='order_item_num'>共{{item.num}}件商品</view>
+            <image src="{{menuimg}}"></image>
+          </view>
+          <view wx:if="{{item.flag == 1||item.flag == 2}}">
+            <view class='order_item_btn' wx:if="{{item.flag == 1}}"  data-soid="{{item.fSaleOrderID}}" catchtap='sureorder'>确认收货</view>
+            <view class='order_item_btn' wx:elif="{{item.flag == 2}}" catchtap='ToEvaluate' data-fid="{{item.fSaleOrderID}}">评价</view>
+          </view>
+        </view>
+      </view>
+      <view class='order_item_foot'>
+        <view>订单号：{{item.fReceiptNo}}</view>
+        <view>
+          <view>{{item.fTitle}}：{{item.fDate}}</view>
+        </view>
+      </view>
+      </view>
+    </view>
+  </checkbox-group>
+  <view class='foot' wx:if="{{OrderList.length > 0 && flag===0 }}">
+    <checkbox-group bindchange="SelectAll">
+      <label class="checkbox">
+        <checkbox value="1" checked="{{SelectAll}}" color="#ff6600"/>全选
+      </label>
+    </checkbox-group>
+    <view class='foot_r_grp'>
+      <view>合计:{{totle}}元</view>
+      <view class='btn foot_button' bindtap='ToSettlement' data-totle='{{totle}}' data-soid="{{OIDList}}" wx:if="{{OIDList.length}}">结算</view>
+      <view class='btn foot_button disabled' bindtap='ToNoSettlement' wx:else>结算</view>
+    </view>
+  </view>
+  <view class='tipsgrp' wx:if="{{!OrderList.length}}">
+    <image src="{{Visibleicon}}"></image>
+    <view class='tip_title'>暂无辅材订单</view>
+    <view class='tip_cont'>需由工人或店长开单，生成订单</view><view class='tip_cont'>请先逛逛“工人开单”的项目</view><view class='tip_cont'>及辅材商城</view>
+  </view>
+</view>
+  <view class='tipsgrp' wx:else>
+    <image src="{{Visibleicon}}"></image>
+    <view class='tip_title'>当前未登录或未关联套房</view>
+    <view class='tip_cont'>需由管理员添加您的套房信息</view><view class='tip_cont'>请先预约量房</view><view class='tip_cont'></view>
+  </view>
+</view>
+

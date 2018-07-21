@@ -1,0 +1,20 @@
+<view class="address-list-wrap">
+  <view class='item' wx:for="{{[1,2,3,4,5]}}">
+    <view class='con'>
+      <view class='contact'>
+        <text>李老三 <text class='on'>(默认)</text></text>
+        <text>18860107100</text>
+      </view>
+      <view class='address'>
+        福建省泉州市晋江市池店镇溜石村48号鑫发 展示道具
+      </view>
+    </view>
+    <view class='edit'>
+      <image src="{{editIcon}}" class='icon'></image>
+    </view>
+  </view>
+</view>
+
+<view class='action-btnbox'>
+  <view class='btn btn-warning' bindtap='addNewAddress'>添加新地址</view>
+</view>

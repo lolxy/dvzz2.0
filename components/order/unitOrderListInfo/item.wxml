@@ -1,0 +1,24 @@
+<view class="unit-wrapper">
+  <view class='img'>
+    <image src="{{imgurl}}"></image>
+  </view>
+  <view class='content'>
+    <view class='leftbox'>
+      <navigator url='#'>
+        高清有线电视线信号线纯铜同轴线高清有线电视线信号线纯铜同轴线高清有线电视线信号线纯铜同轴线
+      </navigator>
+      <view class='attr'>
+        <text>65元/卷</text>
+        <view class='num'>×10</view>
+      </view>
+      <view class='price'>
+        <view class='total'>合计：28元</view>
+        <text>（含运费0.00元）</text>
+      </view>
+    </view>
+
+    <view class='rightbox'>
+      <image src="{{rightIcon}}" class='icon'></image>
+    </view>
+  </view>
+</view>

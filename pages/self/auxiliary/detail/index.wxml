@@ -1,0 +1,22 @@
+<!--pages/self/auxiliary/detail/index.wxml-->
+<view class="container">
+  <view class='detailhead'>
+    <view class='headpic'>
+      <image src="{{infodata.fUrl?infodata.fUrl:defaultimg}}" mode="widthFix" />
+    </view>
+    <view class='head_cont'>
+      <view class='head_c_t'>{{infodata.fMatName}}</view>
+      <view class='head_c_c'>
+        <view wx:if="{{infodata.fNorms}}">规格：{{infodata.fNorms}}</view>
+        <view wx:if="{{infodata.fBrandName}}">品牌：{{infodata.fBrandName}}</view>
+      </view>
+      <view class='head_c_c'>
+        <view>单价：<span>{{infodata.fPrice}}元/{{infodata.fUnitName}}</span></view>
+      </view>
+    </view>
+  </view>
+  <view class='detailcont'>
+    <view>使用说明</view>
+    <text>{{infodata.fConf || '暂无说明'}}</text>
+  </view>
+</view>

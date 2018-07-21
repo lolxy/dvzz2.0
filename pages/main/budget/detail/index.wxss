@@ -1,0 +1,179 @@
+/* pages/detail/detail.wxss */
+.containers{
+  background-color:#f3f3f3;
+  position: absolute;
+  bottom: 0;
+  top:0;
+  width: 100%;
+}
+
+.actionbox{
+  position: fixed;
+  top:0;
+  width: 100%;
+  height: 88rpx;
+  background-color: rgba(0,0,0,.7);
+  display: flex;
+  z-index: 100;
+}
+
+.actionbox view{
+  width: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color:#fff;
+}
+
+.actionbox view.buy view{
+  height: 44rpx;
+  width: 100%;
+  border-right: 1rpx solid #f2f2f3;
+}
+
+.actionbox view image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 22rpx;
+}
+
+/* 详情轮播图模块 */
+.swriper-contains{
+  width: 100%;
+  height: 750rpx;
+  overflow: hidden;
+}
+
+.swriper-contains image{
+  width:100%;
+  height: 750rpx;
+}
+
+.detail-base{
+  background-color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.detail-base .d-head{
+  line-height: 50rpx;
+}
+
+.detail-base .d-head .title{
+  flex:1;
+  font-size: 36rpx;
+  color:#666;
+  font-weight:bolder;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+  margin-right: 20rpx;
+}
+
+.detail-base .d-head text{
+  color:#666;
+  font-size:26rpx;
+}
+
+.detail-base .box{
+  line-height: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.detail-base .box view{
+  font-size:26rpx;
+  color:#666;
+  width: 50%;
+}
+
+.detail-base .unitprice text{
+  color:#ff0101;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.detail-base .unitprice text.sup{
+  vertical-align: super;
+  font-size: 18rpx;
+}
+
+.detail-base .sum-price text{
+  color:#ff0101;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.datail-collect-box{
+  background-color: #fff;
+}
+
+.mycollect{
+  color:#333;
+  font-size: 30rpx;
+  padding-left: 30rpx;
+  line-height: 88rpx;
+  border-bottom: 1rpx solid #dedede;
+  font-weight: bold;
+}
+
+.datail-collect-box .item{
+  border-bottom: 1rpx solid #dedede;
+  padding: 20rpx 30rpx;
+  height: 180rpx;
+  overflow: hidden;
+  display: flex;
+}
+
+.datail-collect-box .item image{
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.datail-collect-box .item .content{
+  flex:1;
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.datail-collect-box .item .content .c-content{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  line-height: 60rpx;
+  flex-direction: column;
+}
+
+.datail-collect-box .item .content .title{
+color:#333;
+font-size: 28rpx;
+font-weight: bold;
+}
+
+.datail-collect-box .item .content .price{
+font-size:26rpx;
+color:#666;
+}
+
+.datail-collect-box .item .content .price text{
+  color:#ff0101;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.datail-collect-box .item .content .dellbox{
+  width: 110rpx;
+  height: 80rpx;
+  border-left: 1rpx solid #dedede;
+  margin: 30rpx 0;
+}
+
+.datail-collect-box .item .content image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx 35rpx;
+}

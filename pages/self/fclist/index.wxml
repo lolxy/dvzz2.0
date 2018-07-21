@@ -1,0 +1,26 @@
+<!--pages/list/list.wxml-->
+<view class='containers'>
+  <view class='list-fixed'>
+    <search-box keyword="{{keyword}}" bindsearchevent="onSearch" displayType="{{displayType}}"></search-box> 
+  </view>
+
+   <scroll-view class="cate-container" scroll-y="{{isScroll}}" scroll-top="{{scrollTop}}" enable-back-to-top="{{true}}" bindscrolltolower="scrollLower">
+  <view class='sub-cate'>
+    <sub-cate-list type="fucai" code="{{code}}" 
+    bindcustomevent="toggleActionSheet"
+    bindchangecurrentcate="onChangeCurrentCate"/>
+  </view>
+  <view class='listbox'>
+    <product-list list="{{goodsList}}" displayType="{{displayType}}" wx:if="{{goodsList.length}}"></product-list>
+    <view class='loaded' wx:if="{{loadedGoods}}">没有更多数据了！</view>
+  </view>
+  </scroll-view>
+
+  <view class='banth-add-order'>
+    <button>批量下订单</button>  
+  </view>
+
+ <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <filter-action-sheet filterList="{{filterList}}" displayType="{{displayType}}" fBrandName="{{fBrandName}}" bindfiltersearch="filterSearch" bindresetsearch="resetFilterSearch"></filter-action-sheet>
+</action-sheet>
+</view>

@@ -1,0 +1,49 @@
+<view class="batch-add-wrap">
+  <view class='header'>
+    <search-box keyword="{{keyword}}" displayType="fucai" bindsearchevent="onSearch"></search-box>
+    <scroll-view class="main-menu" scroll-x>
+      <view class='item' wx:for="{{mainMenuList}}" wx:key="{{index}}">
+        <view>
+          <image src="./images/icon.png"></image>
+          <text class='on'>基础辅材</text>
+        </view>
+      </view>
+    </scroll-view>
+    <scroll-view class="sub-menu" scroll-x>
+      <view class='item' wx:for="{{subMenuList}}" wx:key="{{index}}">
+        <view><text class='tit on'>电线类</text><text class='badge'>17</text></view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='body'>
+    <view class='table-header'>
+      <text class='t1'>选择</text>
+      <text class='t2'>材料名称</text>
+      <text class='t3'>单价</text>
+      <text class='t4'></text>
+    </view>
+    <view class='table-body'>
+      <scroll-view class='scroll-list' scroll-y scroll-top="{{scrollTop}}">
+        <view class='list'>
+          <checkbox-group bindchange="checkboxChange">
+            <view class='item' wx:for="{{goodsList}}" wx:key="{{index}}">
+              <view class='t1'>
+                <checkbox value="{{item.id}}" checked="{{item.checked}}" color="#ff6600"/> 
+              </view>
+              <view class='t2'>{{item.title}}</view>
+              <view class='t3'>{{item.price}}/{{item.unit}}</view>
+              <view class='t4'><image src="./images/right.png" class='icon'></image></view>
+            </view>
+          </checkbox-group>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class='footer'>
+    <view class='btn-box'>
+      <view class='btn btn-full btn-radius' bindtap='submitList'>确认新增</view>
+    </view>
+  </view>
+</view>

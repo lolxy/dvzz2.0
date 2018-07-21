@@ -1,0 +1,148 @@
+<!--pages/detail/detail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<scroll-view class="containers" scroll-y="{{true}}" bindscrolltolower="onScrollTolower" bindscroll="onScroll">
+  <view class='swriper-contains' wx:if="{{detail.list.length}}">
+      <view class="customer-top">
+        <swiper class='customer-banner' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+          <block wx:for="{{detail.list}}" wx:key="{{index}}">
+            <swiper-item>
+              <image src="{{item.fUrl?item.fUrl:loadImg}}" class="slide-image" data-burl="{{item.fUrl?item.fUrl:loadImg}}" lazy-load="true" catchtap='viewBigImg'/>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+  </view>
+  <view class='detail-base mb20'>
+        <view class='d-head'>
+          <view class='title'>{{detail.fMatAllName}}</view>
+          <view class="favicon" bindtap='toggleCollect' wx:if="{{displayType === 'budget' || displayType === 'fucai'}}">
+            <image src="{{isCollect?faviconed:favicon}}"></image>
+          </view> 
+        </view>
+        <view class='price' wx:if="{{displayType != 'fucai'}}">
+          <view wx:if="{{detail.fPrice}}">
+              优惠价：<text>{{detail.fPrice}}元<block wx:if="{{detail.fUnitName}}">/{{detail.fUnitName}}</block></text>
+          </view>
+          <view wx:if="{{detail.fPrice2}}">
+              单价：<text>{{detail.fPrice2}}元<block wx:if="{{detail.fUnitName2}}">/{{detail.fUnitName2}}</block></text>
+          </view>
+        </view>
+        <view class='price' wx:else>
+          <view wx:if="{{detail.fPrice}}">
+              优惠价：<text>{{detail.fPrice}}元<block wx:if="{{detail.fUnitName}}">/{{detail.fUnitName}}</block> </text>
+          </view>
+          <view wx:if="{{detail.fLookNumber}}">
+              库存：<text class='kc'>{{detail.fLookNumber}}<block wx:if="{{detail.fUnitName2}}">{{detail.fUnitName2}}</block></text>
+          </view>
+        </view>
+      </view>
+
+      <view class='datail-params mb20'>
+        <view class='item' wx:if="{{detail.fBrandName}}">品牌：{{detail.fBrandName}}</view>
+        <view class='item' wx:if="{{detail.fQuality}}">材质：{{detail.fQuality}}</view>
+        <view class='item' wx:if="{{detail.fMatName}}">品名：{{detail.fMatName}}</view>
+        <view class='item' wx:if="{{detail.fMatColor}}">颜色：{{detail.fMatColor}}</view>
+        <view class='item' wx:if="{{detail.fNorms}}">规格：{{detail.fNorms}}</view>
+        <view class='item' wx:if="{{detail.fMatCode}}">编码：{{detail.fMatCode}}</view>
+      </view>
+
+      <view class='evaluate mb20' wx:if="{{evaluate.num}}">
+          <navigator url='/pages/main/evaluate/index?id={{currentGoodsId}}'>
+          <view class='ev-header'>
+              <text>商品评价（{{evaluate.num}}）</text>
+              <view>更多 > </view>
+          </view>
+          <view class='ev-info'>
+            <image src="{{evaluate.eval.fHeadUrl}}"></image>
+            <view class='content'>
+              <view class='c-head'>
+                <text class='phone'>{{evaluate.eval.fPhoneNo}}</text>
+                <text>{{evaluate.eval.fDatetime}}</text>
+              </view>
+              <view class='c-info'>
+                 {{evaluate.eval.fRateContent}}
+              </view>
+            </view>
+          </view>
+          </navigator>
+      </view>
+
+        <view class='detail-info tabs'>
+          <view class='tab-nav'>
+            <view class="{{currentTab==0?'on':''}}" data-current="0" bindtap="swichNav"><text>商品详情</text></view>
+            <view class="{{currentTab==1?'on':''}}" data-current="1" bindtap="swichNav"><text>商城详情</text></view>
+          </view>
+                <swiper current="{{currentTab}}" duration="300" bindchange="switchTabs" class='swiper-wrap'>
+                  <swiper-item>
+                    <scroll-view class="tab-content" scroll-y="{{detailScroll}}">
+                      <block wx:if="{{detail.fDesc}}">
+                        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+                      </block>
+                      <block wx:else>
+                        <view class='nodata'>您还没有对该商品进行描述！</view>
+                      </block>
+                    </scroll-view>
+                    </swiper-item>
+                    <swiper-item>
+                    <scroll-view class="tab-content" scroll-y="{{true}}">
+                      <mall-list mallList="{{mallList}}"></mall-list>
+                    </scroll-view>
+                  </swiper-item>
+            </swiper>
+        </view>
+</scroll-view>
+<view class='bth-select-mat' wx:if="{{displayType === 'budget' || displayType === 'fucai'}}">
+  <view class='kefu'>
+    <image src="{{kefuIcon}}"></image>
+    <text>客服</text>
+  </view>
+  <view class='actionBtn'>
+    <view class='yuyue'>
+      <view class='btn btn-primary'>预约安装工</view>
+    </view>
+    <view class='buybox'>
+      <view class='btn btn-warning' bindtap='addCart'>加入购物车</view>
+      <view class='btn btn-danger'>立即购买</view>
+    </view>
+  </view>
+</view>
+<block wx:else>
+<view class='bth-add' wx:if="{{displayType != 'fucai'}}">
+  <button class='btn' bindtap='join'>加入预算</button>
+</view>
+</block>
+
+<view hidden='{{hiddenTipModal}}'>
+  <tip-modal bindclosemodal="onCloseTipModal"></tip-modal>
+</view>
+
+<view class='actionsheet' style='top:{{top}}'>
+  <view class='buySelectAttr'>
+    <view class='header'>
+      <view class='mainimgbox'>
+        <image src="{{detail.fUrl}}" class='mainimg'></image>
+      </view>
+      <view class='t-box'>
+        <view class='price'>￥169元</view>
+        <view class='kucun'>库存：120卷</view>
+        <view class='addplus'>
+          <view class='reduce'>
+            <image src="./images/reduce.png" class='icon'></image>
+          </view>
+          <view class='input'>
+            <input type="number" value='2'/>
+          </view>
+          <view class='plus'>
+            <image src="./images/plus.png" class='icon'></image>
+          </view>
+        </view>
+      </view>
+      <view class='close' bindtap='closeActionSheet'>
+        <image src="{{closeIcon}}"></image>
+      </view>
+    </view>
+    <view class='footer'>
+      <view class='btn'>确定</view>
+    </view>
+  </view>
+</view>

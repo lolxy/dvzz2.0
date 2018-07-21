@@ -1,0 +1,30 @@
+// pages/main/outlink/index.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    link:''
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.setData({
+      link: options.url
+    })
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+    return {
+      title: '多维自装商城',
+      desc: '免费介绍工人，装修辅材配送，专为自装服务',
+      path: '/pages/self/index/index'
+    }
+  }
+})

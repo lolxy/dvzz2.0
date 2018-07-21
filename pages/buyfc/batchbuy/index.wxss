@@ -1,0 +1,228 @@
+/* 头部样式 */
+.header{
+  height: 250rpx;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.header .main-menu{
+  height: 160rpx;
+  white-space: nowrap;
+  border-bottom: 1rpx solid #dedede;
+}
+
+.header .main-menu .item view{
+  width: 160rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding:30rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  color:#666;
+}
+
+.header .main-menu .item view image{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: top;
+}
+
+.header .sub-menu{
+  height: 89rpx;
+  white-space: nowrap;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.header .sub-menu .item{
+  padding: 0 30rpx;
+}
+
+.header .sub-menu .item:first-child{
+  padding-left: 0;
+}
+
+.header .sub-menu .item view{
+  font-size: 25rpx;
+  color:#666; 
+  height: 69rpx;
+  position: relative;
+}
+
+.header .sub-menu .item .tit{
+  /* border-bottom: 5rpx solid #ff6600; */
+  padding-bottom:15rpx; 
+  height: 49rpx;
+  line-height: 50rpx;
+}
+
+.header .sub-menu .item .tit.on,.header .main-menu .item text.on{
+  color:#ff6600;
+}
+
+.header .sub-menu .item .tit.on{
+  border-bottom: 5rpx solid #ff6600;
+}
+
+.header .sub-menu .item .badge{
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 24rpx;
+  font-size: 18rpx;
+  color:#fff;
+  text-align: center;
+  line-height: 24rpx;
+  background-color: #d32f2e;
+  position: absolute;
+  top:0;
+  margin-left: 5rpx;
+}
+
+.header .item{
+  display: inline-block;
+}
+
+.body{
+  position: absolute;
+  top:270rpx;
+  bottom: 120rpx;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.table-header{
+  height: 88rpx;
+  display: flex;
+  border-bottom: 1rpx solid #d1d1d1;
+}
+
+.table-header text{
+  font-size: 24rpx;
+  color:#333;
+  font-weight: 450;
+  line-height: 88rpx;
+  text-align: center;
+  border-right:1rpx solid #d1d1d1;
+}
+
+.table-header .t1{
+  width: 120rpx;
+}
+
+.table-header .t2,.table-header .t3{
+  width: 180rpx;
+}
+
+.table-header .t4{
+  flex:1;
+  border-right:none;
+}
+
+.table-body{
+  position: absolute;
+  top:88rpx;
+  bottom:87rpx;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-list{
+  width: 100%;
+  height: 100%;
+}
+
+.table-footer{
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  border-top:1rpx solid #d1d1d1;
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  line-height: 88rpx;
+  font-size: 26rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.table-footer .add{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  color:#ff6600;
+}
+
+.table-footer .add image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.table-footer .add text{
+  margin-left: 10rpx;
+}
+
+.table-footer .total{
+  color:#d32f2e;
+}
+
+.footer{
+  height: 98rpx;
+  padding: 0 20rpx;
+  overflow: hidden;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 5rpx 0 10rpx rgba(148,151,154,0.35);
+  display: flex;
+}
+
+.footer .sum{
+  flex:1;
+  margin-right: 20rpx;
+  color:#d32f2e;
+  font-size:30rpx;
+  line-height: 98rpx;
+}
+
+.footer .btn-box{
+  flex:1;
+  padding: 15rpx;
+  padding-right: 0;
+}
+
+.footer .btn-box .btn{
+  width: 100%;
+  height: 68rpx;
+  line-height: 68rpx;
+}
+
+.btn{
+  text-align: center;
+  line-height: 55rpx;
+  font-size: 24rpx;
+  letter-spacing: 2rpx;
+  border-radius:9rpx;
+}
+
+.btn.btn-outline{
+  border: 1rpx solid #ff6600;
+  color:#ff6600;
+}
+
+.btn.btn-full{
+  border: 1rpx solid #ff6600;
+  background-color: #ff6600;
+  color:#ffffff;
+}
+
+.btn.btn-radius{
+  border-radius:68rpx;
+}

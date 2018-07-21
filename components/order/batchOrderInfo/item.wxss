@@ -1,0 +1,125 @@
+/* 头部样式 */
+.batch-select-wrapper{
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.table-header{
+  height: 88rpx;
+  display: flex;
+  border-bottom: 1rpx solid #dedede;
+}
+
+.table-header text{
+  font-size: 24rpx;
+  color:#333;
+  font-weight: 450;
+  line-height: 88rpx;
+  text-align: center;
+  border-right:1rpx solid #d1d1d1;
+}
+
+.table-header .t1{
+  width: 120rpx;
+}
+
+.table-header .t2,.table-header .t3{
+  width: 180rpx;
+}
+
+.table-header .t4{
+  flex:1;
+  border-right:none;
+}
+
+.table-body{
+  width: 100%;
+  overflow: hidden;
+}
+
+.table-body .item{
+  display: flex;
+  border-bottom:1rpx solid #d1d1d1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.table-body .item .title{
+  width: 121rpx;
+  border-right:1rpx solid #d1d1d1;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  color:#666;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+
+.table-body .item .content{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+
+.table-body .sub-item{
+  border-bottom:1rpx solid #d1d1d1;
+  display: flex;
+  flex:1;
+}
+
+.table-body .sub-item:last-child,.table-body .item:last-child{
+  border-bottom:none;
+}
+
+.table-body .sub-item .name,.table-body .sub-item .price{
+  width: 180rpx;
+  border-right:1rpx solid #d1d1d1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.table-body .sub-item .name{
+  font-size: 24rpx;
+}
+
+.table-body .sub-item .price{
+  font-size:20rpx;
+  flex-direction: column;
+}
+
+.table-body .sub-item .price .p2{
+  display: flex;
+  justify-content: space-between;
+  width: 120rpx;
+  margin-top: 10rpx;
+}
+
+.table-body .sub-item .action{
+  flex:1;
+  display: flex;
+  padding: 20rpx;
+  padding-right: 0;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.table-body .sub-item .action .num{
+  width: 180rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  text-align: center;
+  font-size:28rpx;
+  color:#666;
+}
+
+.righticon{
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 10rpx;
+}

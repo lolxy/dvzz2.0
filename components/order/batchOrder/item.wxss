@@ -1,0 +1,67 @@
+.batch-order-wrapper{
+  padding: 20rpx;
+}
+.batch-order-wrapper navigator{
+  display: flex;
+}
+.batch-order-wrapper .img{
+  width: 140rpx;
+  height: 140rpx;
+  border:1rpx solid #dedede;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+.batch-order-wrapper .content{
+  flex:1;
+  overflow: hidden;
+  display: flex;
+}
+
+.batch-order-wrapper .content .leftbox{
+  flex:1;
+  overflow: hidden;
+  justify-content: space-around;
+  flex-direction: column;
+  display: flex;
+}
+
+.batch-order-wrapper .content .leftbox .title{
+  font-size:30rpx;
+  color:#333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+}
+
+.batch-order-wrapper .content .leftbox .total{
+  font-size:28rpx;
+  color:#d32f2e;
+}
+
+.batch-order-wrapper .content .leftbox .yunfei{
+  font-size:24rpx;
+  color:#999;
+}
+
+.batch-order-wrapper .content .rightbox{
+  width: 200rpx;
+  margin-left: 20rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.batch-order-wrapper .content .rightbox .total{
+  color:#999;
+  font-size:26rpx;
+  flex:1;
+  margin-right: 10rpx;
+  text-align: center;
+}
+
+.batch-order-wrapper .content .rightbox image{
+  width: 30rpx;
+  height: 30rpx;
+}

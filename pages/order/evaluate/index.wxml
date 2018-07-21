@@ -1,0 +1,61 @@
+<!--pages/order/evaluate/index.wxml-->
+<view class='container' style="padding-bottom: 100rpx;">
+  <form bindsubmit="evaluateSubmit">
+    <view class='head'>
+      <view class='head_t'>{{mainEvaluate.fDesc}}</view>
+      <input type="text" value="{{item.fValue?item.fValue:CurrentEvaluate0}}" name="rateListvalue0" hidden="{{true}}"/>
+      <input type="text" value="{{mainEvaluate.fID}}" name="rateListkey0" hidden="{{true}}"/>
+      <view class='star_grp'>
+        <image src="{{CurrentValue0 >= index?SolidStar:hollow}}" data-value="{{item.fID}}" data-name="{{item.fDesc}}" data-index="{{index}}" wx:for="{{EvaluateList}}" wx:key="fid" bindtap="changeStar1"/>
+      </view>
+      <view class='star_name'>{{CurrentName0}}</view>
+    </view>
+    <view class='form_item'>
+      <view class='from_title'>
+        <view class='item_name'>文字描述</view>
+        <label>
+          <switch value="{{isnormal}}" name="fIsAnonymus" checked="{{isnormal}}" bindchange="switch1Change"/> 匿名提交
+        </label>
+      </view>
+      <view class='item_body'>
+        <textarea placeholder='请输入您对商品的评价' name="fRateContent"></textarea>
+      </view>
+    </view>
+    <view class='form_item'>
+      <view class='from_title'>
+        <view class='item_name'>上传图片</view>
+      </view>
+      <view class='item_body image_list'>
+        <view class='up_grp' bindtap='ChooseImage'>
+          <image class='up_icon' src="{{transicon}}"/>
+          <view>点击上传</view>
+        </view>
+        <view class='list_grp' wx:for="{{listpic}}" wx:key="{{index}}">
+          <image class='list_pic' src="{{item.path}}"/>
+          <image class='del_icon' src="{{delicon}}"/>
+        </view>
+      </view>
+    </view>
+    <view class='form_item' style='margin-bottom: 100rpx;'>
+      <view class='from_title'>
+        <view class='item_name'>店铺评价</view>
+      </view>
+      <view class='item_body' style="flex-direction: column;">
+        <view class='evagrp' wx:for="{{OtherList}}" wx:for-index="idx" wx:for-item="other" wx:key="{{idx}}">
+          <view class='eva_title'>{{other.fDesc}}</view>
+          <input type="text" value="{{OtherList.length+1}}" name="rateListlength" hidden="{{true}}"/>
+          <view class='eva_cont'>
+            <input type="text" value="{{other.fValue?other.fValue:CurrentEvaluate[idx]}}" name="{{'rateListvalue'+(idx+1)}}" hidden="{{true}}"/>
+            <input type="text" value="{{other.fID}}" name="{{'rateListkey'+(idx+1)}}" hidden="{{true}}"/>
+            <view class='star_grp'>
+              <image src="{{idy <= CurrentValue[idx]?SolidStar:hollow}}" data-value="{{namey.fID}}" data-name="{{namey.fDesc}}" data-index="{{idy}}" wx:for="{{EvaluateList}}" wx:for-index="idy" wx:for-item="namey" wx:key="fID" data-idx="{{idx}}" bindtap="changeStar2"/>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='foot'>
+      <button formType="submit"> 发  布 </button>
+    </view>
+  </form>
+</view>

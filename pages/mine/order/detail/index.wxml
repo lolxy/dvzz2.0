@@ -1,0 +1,79 @@
+<view class='comfirm-wrapper order-wrapper'>
+  <view class='order-status'>
+    <view class='con'>
+      <view class='status'>等待买家付款</view>
+      <text>剩余15分钟自动关闭</text>
+    </view>
+    <view class='pic'>
+      <image src='{{statusIcon}}'></image>
+    </view>
+  </view>
+
+  <view class='order-header'>
+    <select-address></select-address>
+  </view>
+
+  <view class='order-body'>
+    <view class='order-item'>
+      <view class='order-info'>
+        <text>水电工钱订单：A48512442</text>
+        <text>2018-7-5</text>
+      </view>
+      <!-- <unit-order-info></unit-order-info>
+      <unit-order-mine-info></unit-order-mine-info> -->
+      <batch-order-info></batch-order-info>
+    </view>
+    
+    <view class='order-info'>
+      <view class='dl'>
+        <view class='dt'>商品总价</view>
+        <view class='dd price'>250元</view>
+      </view>
+      <view class='dl'>
+        <view class='dt'>发货地：</view>
+        <view class='dd'>百信御江帝景店</view>
+      </view>
+      <view class='dl'>
+        <view class='dt'>运费</view>
+        <view class='dd price'>0元</view>
+      </view>
+      <view class='dl'>
+        <view class='dt'>优惠券</view>
+        <view class='dd youhuiquan'>暂无</view>
+      </view>
+      <view class='libox'>订单总价：<text>￥250元</text></view>
+    </view>
+  </view>
+
+  <view class='order-footer'>
+    <view class='dl'>
+      <view class='dt'>买家留言：</view>
+      <view class='dd'>打打分得紧紧的打打分得紧紧的打打分得紧紧的打打分得紧紧的打打分得紧紧的打打分得紧紧的打打分得紧紧的打打分得紧紧的打打分得紧紧的打打分得紧紧的打打分得紧紧的</view>
+    </view>
+  </view>
+</view>
+
+<view class='action-btnbox'>
+   <view class='kefu'>
+    <image src='{{kefuIcon}}' class='icon'></image>
+    <text>客服</text>
+   </view>
+   <view class='btn'>取消订单</view>
+   <view class='btn btn-warning' bindtap='submitOrder'>付款</view>
+</view>
+
+<!-- 支付弹窗 -->
+<view class='actionsheet' style='top:{{top}}'>
+  <view class='paybox'>
+    <view class='close' bindtap='closeActionSheet'>
+      <image src="{{closeIcon}}"></image>
+    </view>
+    <view class='tip'>确定付款</view>
+    <view class='price'>￥<text>650</text>.00元</view>
+    <view class='pay-btn'>
+      <!-- <view class='btn btn-warning'>零钱支付（余额：3245元）</view> -->
+      <view class='btn btn-disabled'>零钱支付（余额：600元）</view>
+      <view class='btn btn-chat'>微信支付</view>
+    </view>
+  </view>
+</view>

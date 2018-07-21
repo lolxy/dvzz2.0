@@ -1,0 +1,74 @@
+<!--pages/main/budget/index/index.wxml-->
+<view class='containers'>
+  <view class='nav'>
+     <view class='menus'>  
+     <view class="item {{currentIndex == index?'on':''}}" wx:key="{{index}}" data-index="{{index}}" bindtap='getCurrentType' wx:for="{{orderList}}">
+        <view class='item-wrap'>
+          <text class='tit'>{{item.fValue}}</text>
+          <text>￥{{item.fAmount}}元</text>
+        </view>
+      </view>
+    </view> 
+    <scroll-view class='menu-sub' scroll-x="{{true}}" style='width:{{windowWidth}}px;'>
+      <view class='item' data-id="{{elem.fID}}" data-code="{{elem.fCode}}" wx:for="{{orderList[currentIndex].list}}" wx:key="{{listIndex}}" data-index="{{listIndex}}" wx:for-index="listIndex" wx:for-item="elem" bindtap='getcurrentCodeData'>
+        <text class="{{currentDetailId == elem.fID?'on':''}}">{{elem.fValue}}</text>
+      </view>
+    </scroll-view> 
+  </view>
+
+  <view class='xuancai-wrap' wx:if="{{currentType == 'fucai'}}">
+    <view class='x-header'>
+      <view class='th'>商品</view>
+      <view class='th flex2'>规格</view>
+      <view class='th'>单价</view>
+      <view class='th'>单位</view>
+      <view class='th'>数量</view>
+      <view class='th'>金额</view>
+    </view>
+
+    <scroll-view class='list' scroll-y="{{true}}">
+      <view class='item' wx:for="{{formateOrderDetailList}}" wx:key="{{index}}">
+        <view class='namebox'>
+          <text class='name'>{{item.fMatName || ''}}</text>
+           <text class='brand' wx:if="{{item.fBrandName}}">({{item.fBrandName}})</text> 
+        </view>
+        <view class='specbox'>
+          <block wx:for="{{item.children}}" wx:for-item="spec" wx:for-index="specIndex" wx:key="{{specIndex}}">
+            <view class='spec-list'>
+              <view class='td flex2'>{{spec.fNorms || ''}}</view>
+              <view class='td'>{{spec.fPrice || 0}}</view>
+              <view class='td'>{{spec.fUnit || ''}}</view>
+              <view class='td'>{{spec.fQuantity || 0}}</view>
+              <view class='td'>{{spec.fAmount || 0}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='xuancai-wrap' wx:else>
+    <view class='x-header'>
+      <view class='th'>区域</view>
+      <view class='th flex2'>规格</view>
+      <view class='th'>价格</view>
+    </view>
+
+    <scroll-view class='list' scroll-y="{{true}}">
+      <view class='item' wx:for="{{orderDetailList}}" wx:key="{{index}}">
+        <view class='td'>{{item.fSpace}}{{item.fPosition}}</view>
+        <view class='td flex2 guige'>
+          <text>{{item.fMatName || ''}}</text>
+          <text><block wx:if="{{item.fPrice}}">{{item.fPrice}}元/{{item.fUnit}}*</block>{{item.fQuantity || 0}}{{item.fUnit}}</text>
+        </view>
+        <view class='td'>{{item.fAmount || 0}}元</view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='footer'>
+    <view class='total'>
+      <text>合计：{{sumPrice}}元</text>
+    </view>
+  </view>
+</view>

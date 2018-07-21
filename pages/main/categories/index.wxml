@@ -1,0 +1,24 @@
+<!--pages/categories/categories.wxml-->
+<view class='containers'>
+  <view class='cate-search'>
+    <search-box bindsearchevent="onSearch"></search-box>  
+  </view>
+
+  <scroll-view class="cate-container" scroll-y="{{true}}">
+    <view class='cate-list'>
+      <block wx:for="{{categoryList}}" wx:key="{{index}}">
+        <view class='cat-main-title'>
+          <image src="{{item.fUrl}}"></image>
+          <!-- <text>{{item.fType1}}</text> -->
+          <navigator url="/pages/main/list/index?code1={{item.fTypeCode1}}&catname={{item.fType1}}">{{item.fType1}}</navigator>
+        </view>
+        <view class='cat-sub-list'>
+          <view wx:for="{{item.data2}}" wx:for-index="childIndex" wx:for-item="childItem" wx:key="childIndex">
+            <!-- <navigator url="/pages/main/list/index?code1={{item.fTypeCode1}}&&code2={{childItem.fTypeCode2}}&&code3={{childItem.data3[0].fTypeCode}}">{{childItem.fType2}}</navigator> -->
+             <navigator url="/pages/main/list/index?code1={{item.fTypeCode1}}&&code2={{childItem.fTypeCode2}}&catname={{childItem.fType2}}">{{childItem.fType2}}</navigator>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,129 @@
+.header-box{
+  width: 100%;
+  height: 340rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.header-box .headbg{
+  width: 750rpx;
+  height: 340rpx;
+  position: absolute;
+  top:0rpx;
+  left: 0rpx;
+}
+
+.set{
+  position: absolute;
+  right: 20rpx;
+  top:20rpx;
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  padding-top: 5rpx;
+}
+
+.base-info{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 50rpx 20rpx 35rpx;
+}
+
+.base-info .photo{
+  width: 145rpx;
+  height: 145rpx;
+  border: 5rpx solid #ff6600;
+  border-radius: 50%;
+  box-shadow: 1rpx 1rpx 0rpx rgba(4,0,0,0.35);
+  vertical-align: top;
+  margin-bottom: 20rpx;
+}
+
+.base-info .name{
+  font-size:36rpx;
+  color:#333;
+  font-weight: 700;
+  line-height: 50rpx;
+}
+
+.base-info .account{
+  font-size:30rpx;
+  color:#333;
+  font-weight: 600;
+  line-height: 45rpx;
+}
+
+.mine-body{
+  padding: 20rpx;
+}
+
+.mine-body .panel{
+  background-color: #fff;
+  padding: 0rpx 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.mine-body .panel:last-child{
+  margin-bottom: 0rpx;
+}
+
+.panel .panel-head{
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  border-bottom:1rpx solid #dedede;
+  line-height: 80rpx;
+}
+
+.panel-head .tit{
+  font-size:28rpx;
+  color:#333;
+}
+
+.panel-head navigator{
+  font-size:24rpx;
+  color:#999;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.panel-head navigator image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 2rpx;
+  margin-left: 2rpx;
+}
+
+.menu-list{
+  display: flex;
+}
+
+.menu-item{
+  flex:1;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 170rpx;
+}
+
+.menu-item image{
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: top;
+  margin-bottom: 5rpx;
+}
+
+.menu-item text{
+  font-size:24rpx;
+  color:#999999;
+}

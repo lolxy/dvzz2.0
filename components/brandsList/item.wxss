@@ -1,0 +1,49 @@
+.brand-list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.brand-item{
+  height: 200rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+  display: flex;
+  border-bottom: 1rpx solid #d1d1d1;
+}
+
+.brand-item image{
+  width: 223rpx;
+  height: 145rpx;
+  border: 1rpx solid #dedede;
+}
+
+.brand-item .content{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30rpx;
+}
+
+.brand-item .content .title{
+  font: 30rpx;
+  color:#333;
+  line-height: 85rpx;
+  height: 75rpx;
+  font-weight: 450;
+}
+
+.brand-item .content .info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand-item .content .info text{
+  line-height: 70rpx;
+  height: 70rpx;
+  color:#666;
+  font-size: 24rpx;
+}

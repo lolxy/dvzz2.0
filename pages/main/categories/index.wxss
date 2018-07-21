@@ -1,0 +1,65 @@
+/* pages/categories/categories.wxss */
+.cate-container{
+position: absolute;
+top:88rpx;
+bottom: 0;
+background-color: #f3f3f3;
+}
+
+.cate-search{
+  position: fixed;
+  height: 88rpx;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 分类列表 */
+.cat-main-title{
+  height: 90rpx;
+  line-height: 90rpx;
+  color:#333;
+  font-size: 30rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.cat-main-title navigator{
+  color:#333;
+  font-size: 30rpx;
+  background: none;
+}
+
+.cat-main-title image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 25rpx;
+}
+
+.cat-sub-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 20rpx;
+}
+
+.cat-sub-list view{
+  margin-bottom: 20rpx;
+  margin-right: 18rpx; 
+}
+
+.cat-sub-list navigator{
+  width: 160rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  border: 1rpx solid #dedede;
+  border-radius: 58rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color:#666;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #fff;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "多维自装商城",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "product-list": "/components/productList/item"
+  }
+}

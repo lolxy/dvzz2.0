@@ -1,0 +1,44 @@
+<!--pages/main/budget/index/index.wxml-->
+<view class='container'>
+  <view class='nav'>
+    <view class='item' data-code="{{item.fCode}}" wx:for="{{menuList}}" wx:key="{{index}}" data-fvalue="{{item.fValue}}" bindtap='getCurrentMenuData'>
+      <image src='{{item.fUrl}}'></image>
+      <text class="{{currentCode == item.fCode?'on':''}}">{{item.fValue}}</text>
+    </view>
+  </view>
+
+  <view class='xuancai-wrap'>
+    <view class='x-header'>
+      <text>{{currentMenu}}</text>
+      <navigator url='/pages/main/budget/xuancai/index?code={{currentCode}}' wx:if="{{xcList.length}}">去选材</navigator>
+    </view>
+
+    <scroll-view class='list' scroll-y="{{true}}">
+      <view class='item' wx:for="{{xcList}}" wx:key="{{index}}" data-id="{{item.fID}}" data-subcode="{{item.fCode}}" bindtap='gotoPage'>
+        <view class='title'>
+          <image src="{{item.fUrl}}"></image>
+           <text>{{item.fValue}}<text class='badge' wx:if="{{item.num}}">{{item.num}}</text></text> 
+        </view>
+        <view class='price'>￥{{item.fAmount}}元</view>
+        <view class='right'>
+          <image src="{{rightIcon}}"></image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='footer'>
+    <view class='map' bindtap='tipOpenModal'>
+      <image src='{{mapIcon}}'></image>
+      <text>路线图</text>
+    </view>
+    <view class='total'>
+      <text>合计：{{sumPrice}}元</text>
+      <navigator url='/pages/main/budget/bill/index'>查看报价</navigator>
+    </view>
+  </view>
+</view>
+
+<view hidden='{{hiddenTipModal}}'>
+  <tip-modal bindclosemodal="onCloseTipModal"></tip-modal>
+</view>

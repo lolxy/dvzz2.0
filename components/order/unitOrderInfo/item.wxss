@@ -1,0 +1,43 @@
+.unit-wrapper{
+  padding: 20rpx;
+  display: flex;
+}
+.unit-wrapper .img{
+  width: 140rpx;
+  height: 140rpx;
+  border:1rpx solid #dedede;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+.unit-wrapper .content{
+  flex:1;
+  overflow: hidden;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+.unit-wrapper .content navigator{
+  font-size:30rpx;
+  color:#333;
+  line-height: 60rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+}
+.unit-wrapper .content .attr{
+  display: flex;
+  justify-content: space-between;
+  height: 60rpx;
+  align-content: center;
+  align-items: center;
+}
+.unit-wrapper .content .attr .num{
+font-size: 26rpx;
+color:#666;
+}
+.unit-wrapper .content .attr text{
+  font-size:28rpx;
+  color:#d32f2e;
+}

@@ -1,0 +1,25 @@
+<!--pages/self/aborprice/index.wxml-->
+<view class="container">
+  <view class='fixed-box' wx:if="{{isShow}}">
+  <view class='searchgrp'>
+    <view class="search-item">
+      <input placeholder="搜索" auto-focus="{{false}}" value='{{Searchdata}}' confirm-type="search" bindconfirm="GetSearch"/>
+    </view>
+  </view>
+  <view class='typelist'>
+    <view class="{{index==currenttab?'active':''}}"  wx:for="{{tabs}}" wx:key="{{index}}" data-fcode="{{item.fCode}}" data-index="{{index}}" bindtap='TabsChange'>{{item.fValue}}</view>
+  </view>
+</view>
+<view wx:if="{{datalist.length}}">
+  <view class='find_lst' wx:for="{{datalist}}" wx:key="{{index}}">
+    <image class="find_item_pic" src="{{item.fThumbnailUrl}}" bindtap='showimg' data-url="{{item.fThumbnailUrl}}"/>
+    <view>
+      <view  class='see_item'>{{item.fMatName}}</view>
+      <view class='seee_item2'>
+        工钱：<span>{{item.fPrice}}元/{{item.fUnitName}}</span>
+      </view>
+    </view>
+  </view>
+  </view>
+  <view class='no-data' wx:else>没有相关记录!</view>
+</view>

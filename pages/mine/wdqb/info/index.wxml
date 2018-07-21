@@ -1,0 +1,13 @@
+<!--pages/mine/wdqb/info/index.wxml-->
+<view class='container'>
+  <view class='header'>
+    <view class='cash_icon'><image src='{{Cash_Icon}}'/></view>
+    <view class='cash_title'>我的余额</view>
+    <view class='cash_title' wx:if="{{nocash==1}}">￥ <span>{{fAmount?fAmount:0}}</span> 元</view>
+    <view class='cash_title' wx:else>暂无余额信息请刷新页面重试</view>
+  </view>
+  <view class='cash_btngrp'>
+    <view class='btn cash_btn_hove' bindtap='ToRecharge'>充 值</view>
+    <view class='btn' bindtap='ToBill'>消费账单</view>
+  </view>
+</view>

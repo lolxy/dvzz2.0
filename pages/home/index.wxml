@@ -1,0 +1,77 @@
+<!--self/index.wxml-->
+<scroll-view class="container" scroll-y="{{true}}">
+  <view class='index_head'>
+    <view class='local'>
+      <image src='{{LocalImage}}' class='localicon'></image>
+      <picker mode = "selector" bindchange="cityChange" value="0" range="{{citylist}}" range-key="fValue">
+        <view class="picker">
+          {{currentCity}}<image class='down-icon' src="{{downIcon}}"></image>
+        </view>
+      </picker>
+    </view>
+    <view class='search-box'>
+      <image src="{{searchIcon}}"></image>
+      <input placeholder="搜索商品、店铺" placeholder-class="placecss" value='{{searchdata}}' confirm-type="search" bindinput="searchInput" bindconfirm="search"/>
+    </view>
+    <view class='index_icongrp'>
+      <image src='{{QRCode}}' bindtap='scanCode'></image>
+      <image src='{{msgIcon}}' bindtap='message'></image>
+    </view>
+  </view>
+  <view class="customer-top">
+    <swiper class='customer-banner' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item.bPath}}" class="slide-image" data-ftype="{{item.fType}}" data-bUrl="{{item.bUrl}}" bindtap='toOutLink'/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='mainmenulist'>
+    <view class='item' wx:for="{{LinkList}}" data-url="{{item.fUrl}}" bindtap='JumpTo' wx:key="{{index}}">
+      <image class='linkimg' src='{{item.fImgUrl}}'></image>
+      <view class='linkname'>{{item.fTitle}}</view>
+    </view>
+  </view>
+
+  <view class='submenulist'>
+    <view class='item' wx:for="{{subMenuList}}" data-url="{{item.fUrl}}" bindtap='JumpTo' wx:key="{{index}}">
+      <image class='linkimg' src='{{item.fImgUrl}}'></image>
+      <view class='linkname'>{{item.fTitle}}</view>
+    </view>
+  </view>
+
+  <view class='user-panel'>
+    <view class='user-panel-header'>
+      <text>您好！</text>
+      <view class='btn' bindtap='goToLogin'>登录</view>
+    </view>
+    <view class='user-panel-body'>
+      <view class='item' wx:for="{{tipList}}" data-url="{{item.fUrl}}" bindtap='JumpTo' wx:key="{{index}}">
+        <image src='{{item.fImgUrl}}'></image>
+        <text>{{item.fTitle}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='recom'>
+    <navigator url="">
+      <image src='{{recom.recom1}}'></image>
+    </navigator>
+    <navigator url="">
+      <image src='{{recom.recom2}}'></image>
+    </navigator>
+  </view>
+
+  <!-- 推荐模块 -->
+  <view class='recom-list'>
+    <view class='recom'>
+      <image src='{{shopIcon}}'></image>
+      <text>为您推荐</text>
+    </view>
+
+    <product-list list="{{recommonList}}"></product-list>
+  </view>
+
+</scroll-view>

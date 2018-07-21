@@ -1,0 +1,15 @@
+.development{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  color:#999;
+} 
+
+.warning{
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 20rpx;
+}

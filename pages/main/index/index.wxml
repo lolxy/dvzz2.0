@@ -1,0 +1,82 @@
+<!--index.wxml-->
+<scroll-view class="containers" scroll-y="{{true}}" bindscrolltolower="scrollToBottom">
+<view class='index_head'>
+    <view class='local'>
+      <image class='local-icon' src='{{localImage}}'></image>
+      <picker mode = "selector" bindchange="cityChange" value="0" range="{{citylist}}" range-key="fValue">
+        <view class="picker">
+          {{currentCity}}<image class='down-icon' src="{{downIcon}}"></image>
+        </view>
+      </picker>
+    </view>
+    <view class='index_icongrp'>
+      <image src='{{qRCode}}' bindtap='scanCode'></image>
+      <image src='{{phoneIcon}}' bindtap='callPhone'></image>
+      <image src='{{userIcon}}' bindtap='gotoMessage'></image>
+    </view>
+  </view>
+
+  <view class='swriper-contains'>
+      <view class="customer-top">
+        <swiper class='customer-banner' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+          <block wx:for="{{banner}}" wx:key="{{index}}">
+            <swiper-item wx:if="{{item.bPath }}">
+              <image src="{{item.bPath}}" class="slide-image" data-burl="{{item.bUrl}}" bindtap='toOutLink' lazy-load/>
+            </swiper-item>
+          </block>
+        </swiper>
+  </view>
+  </view>
+
+  <view class='menu'>
+    <block wx:for='{{menuList}}' wx:key='{{index}}'>
+      <view class='menu-item' data-fUrl='{{item.fUrl}}' data-title='{{item.fTitle}}' data-index='{{index}}' bindtap="goToPage">
+        <image src='{{item.fImgUrl}}'></image>
+        <text>{{item.fTitle}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class='lanmu'>
+    <view class='main'>
+      <view bindtap='goToselectMatPage' data-type='virtual'>
+        <image src='{{lanmu.lanmu1}}'></image>
+      </view>
+    </view>
+    <view class='submain'>
+      <view class='sitem'>
+        <navigator url="/pages/main/categories/index">
+          <image src='{{lanmu.lanmu2}}'></image>
+        </navigator>
+      </view>
+      <view class='sitem'>
+        <view bindtap='goToselectMatPage' data-type='my'>
+          <image src='{{lanmu.lanmu3}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 推荐模块 -->
+  <view class='recom-list'>
+    <view class='recom'>
+      <image src='{{shopIcon}}'></image>
+      <text>为您推荐</text>
+    </view>
+
+    <product-list list="{{recommonList}}"></product-list>
+  </view>
+</scroll-view>
+
+<view class='modal-wrap' hidden='{{hiddenModal}}'>
+  <view class='mask' bindtap='closeModal'></view>
+  <view class='modal'>
+    <view class='modal-content'>
+      <text>暂无主材列项,无法预算</text>
+      <text>请预约量房</text>
+    </view>
+    <view class='modal-footer'>
+      <view class='comfirm' bindtap='comfirm'>确定</view>
+    </view>
+  </view>
+</view>

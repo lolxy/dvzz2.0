@@ -1,0 +1,96 @@
+.address-add-wrapper{
+  padding-bottom: 98rpx;
+}
+
+.address-add-wrapper .box{
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+
+.address-add-wrapper .dl{
+  display: flex;
+  height: 88rpx;
+  align-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+  border-bottom: 1rpx solid #dedede;
+}
+
+.address-add-wrapper .dl:last-child{
+  border-bottom:none;
+}
+
+.address-add-wrapper .dl .dt{
+  color:#333;
+  font-size:30rpx;
+  font-weight: bold;
+  max-width: 150rpx;
+}
+
+.address-add-wrapper .dl .dd{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.address-add-wrapper .dl .dd input{
+  height: 80rpx;
+  font-size: 26rpx;
+  line-height: 80rpx;
+  width: 100%;
+}
+
+.radio-group{
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.radio-group .radio{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-size:25rpx;
+  color:#333;
+  margin-right: 20rpx;
+}
+
+.radio-group .radio radio{
+  transform: scale(.8)
+}
+
+.address-add-wrapper .dl.select{
+  justify-content: space-between;
+}
+
+.address-add-wrapper .dl.select .dd{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.address-add-wrapper .dl.select text{
+  margin-right: 30rpx;
+  font-size: 26rpx;
+  color:#ff6600;
+}
+
+.address-add-wrapper .dl.select image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.default{
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.default text{
+  color:#333;
+  font-size:30rpx;
+  font-weight: bold;
+}

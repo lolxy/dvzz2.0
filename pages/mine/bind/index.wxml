@@ -1,0 +1,12 @@
+<!--pages/mine/bind/index.wxml-->
+<view class='container'style="background-color: #f5f5f5;">
+  <image src="{{logopic}}" class='logo'/>
+  <view class='form_t'>多维自装</view>
+  <view class='form_grp'>
+    <input type='number' name="fPhoneNo" class='input_a' placeholder='请输入手机号' confirm-type='done' bindinput='phonein1' bindconfirm='phonein' bindblur="phonein" value="{{phone}}"/>
+  </view>
+  <view class='form_f'>
+    <view class="btn" wx:if="{{Isphone==0}}" bindtap='tostep2'>下一步</view>
+    <view class="btn enable}}" wx:else>下一步</view>
+  </view>
+</view>

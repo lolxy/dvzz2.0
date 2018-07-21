@@ -1,0 +1,237 @@
+/***** 一般设置 *****/
+view, image, text, form, checkbox-group, scroll-view{
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  background-color: #f3f3f3;
+}
+/*****  门店列表   *****/
+.shopgrp {
+  width: 100%;
+  background-color: #ffffff;
+}
+.shophead {
+  width: 100%;
+  padding: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #ddd;
+}
+.shophead image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.shophead span {
+  font-size: 30rpx;
+  line-height: 1em;
+  color: #ff6701;
+}
+.shopcont {
+  width: 100%;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  border-bottom: 2rpx solid #ddd;
+}
+.shop_cont_pic {
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 20rpx;
+  border-radius: 8rpx;
+}
+.shop_cont_r {
+  flex: auto;
+}
+.shop_cont_r .shop_cont_title {
+  line-height: 24rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop_cont_name {
+  font-size: 28rpx;
+  line-height: 1em;
+  color: #333333;
+  float: left;
+}
+.shop_cont_range {
+  font-size: 24rpx;
+  line-height: 1em;
+  color: #999999;
+  float: right;
+}
+.shop_cont_uname {
+  margin-top: 12rpx;
+  font-size: 28rpx;
+  line-height: 1em;
+  color: #666666;
+  clear: both;
+}
+.shop_cont_btngrp {
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.shop_cont_btngrp image{
+  max-width: 22rpx;
+  height: 22rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+  vertical-align: center;
+}
+.shop_cont_btngrp .btn {
+  padding: 10rpx 40rpx;
+  font-size: 24rpx;
+  line-height: 1em;
+  border-width: 2rpx;
+  border-style: solid;
+  border-radius: 8rpx;
+}
+.shop_cont_btngrp .btn_call {
+  color: #03abf6;
+  border-color: #03abf6;
+}
+.shop_cont_btngrp .btn_navi {
+  color: #ffc007;
+  border-color: #ffc007;
+}
+.shop_cont_btngrp .btn_praise {
+  color: #8bc24a;
+  border-color: #8bc24a;
+}
+/**  横向滑动srcollhead  **/
+.scroll_x_head {
+  width: 100%;
+  /** 
+  //scroll-view 不能使用弹性盒模型
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+    **/
+  background-color: #ffffff;
+}
+.scroll_x_head image{
+  max-width: 50rpx;
+  max-height: 50rpx; 
+}
+/**  带横向滚动条的list项目  **/
+.scorll_title {
+  text-align: center;
+}
+.scorll_title image {
+  max-width: 30rpx;
+  max-height: 30rpx;
+}
+.scorll_list {
+  width: 100%;
+}
+/****  fixed-footer  ****/
+.foot {
+  width: 100%;
+  height: 100rpx;
+  background-color: #ffffff;
+  bottom: 0;
+  position: fixed;
+}
+/****  flex等分策略   ****/
+.flex_col_1 {
+  flex: 1;
+}
+.flex_col_2 {
+  flex: 2;
+}
+.flex_col_3 {
+  flex: 3;
+}
+.flex_col_4 {
+  flex: 4;
+}
+/****  一般表格   ****/
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: #ffffff;
+}
+.table_border {
+  border-top: 2rpx solid #ddd;
+  border-left: 2rpx solid #ddd;
+}
+.thead {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.table_border .thead {
+  border-bottom: 2rpx solid #ddd;
+}
+.thead > view {
+  padding: 30rpx 20rpx; 
+  font-size: 28rpx;
+  line-height: 30rpx;
+  color: #333333;
+  text-align: center;
+}
+.table_border .thead > view {
+  border-right: 2rpx solid #ddd;
+}
+.tbody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.tabrows {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.table_border .tabrows {
+  border-bottom: 2rpx solid #ddd;
+}
+.tabrows > view {
+  padding: 30rpx 20rpx; 
+  font-size: 28rpx;
+  line-height: 30rpx;
+  color: #666666;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tabrows > view:last-child {
+  text-align: right;
+  align-items: flex-end;
+}
+.table_border .tabrows > view {
+  border-right: 2rpx solid #ddd;
+}
+.table image {
+  max-width: 30rpx;
+  max-height: 30rpx; 
+}
+radio {
+  transform: scale(0.6);
+}

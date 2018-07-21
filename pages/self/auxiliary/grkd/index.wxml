@@ -1,0 +1,61 @@
+<!--pages/self/auxiliary/grkd/index.wxml-->
+<view class='container'  style="padding-bottom: 100rpx;">
+  <view class='head'>
+    <scroll-view scroll-x>
+      <view class="order_tabs {{currentfID==item.fID?'active':''}}" wx:for="{{tabs}}" wx:key="{{index}}" bindtap='TabChange' data-tabcode="{{item.fCode}}" data-fid="{{item.fID}}" data-fcode="{{item.fMatCode}}" data-name="{{item.fValue}}">
+        <image src="{{item.fUrl}}"/>
+        <view>{{item.fValue}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='typelist'>
+    <scroll-view scroll-x>
+      <view class="typeitem {{index==flag?'active':''}}" wx:for="{{StatusList}}" data-flag="{{index}}" data-brand="{{item.flag}}" wx:key="{{index}}" bindtap='ChangeFlags'>
+        {{item.fType?item.fType:'item_'+index}}
+      </view>
+    </scroll-view>
+  </view>
+  <view class='table table_border'>
+    <view class='thead'>
+      <view class='flex_col_200'>商品</view>
+        <view class='flex_col_550'>
+          <view class='flex_column'>
+          <view class='flex_col_200'>名称</view>
+          <view class='flex_col_125'>单价</view>
+          <view class='flex_col_125'>单位</view>
+          <view class='flex_col_100'></view>
+        </view>
+      </view>
+    </view>
+    <view class='tbody'>
+      <view class='tabrows' wx:for="{{fMPDItemlist[flag].list}}" wx:for-item="itemf" wx:key="{{indexf}}" wx:for-index="indexf">
+        <view class='flex_col_200'>{{itemf}}</view>
+        <view class='flex_col_550' >
+          <view class='flex_column' wx:for="{{StatusList[flag].list}}" data-id="{{item.fMatID}}" wx:for-item="items" wx:key="{{indexs}}" wx:for-index="indexs" wx:if="{{itemf==items.fMPDItem}}">
+            <view class='flex_col_200'>
+              <view>{{items.fMaterialPickDetailName}}</view>
+              <view wx:if="{{items.fBrandName!='无' && items.fBrandName!=''}}">({{items.fBrandName}})</view>
+            </view>
+            <view class='flex_col_125'>{{items.fPrice}}元</view>
+            <view class='flex_col_125'>{{items.fUnitName}}</view>
+            <view class='flex_col_100' bindtap='ToDetail' data-fmname="{{items.fMatName}}"  data-funitname="{{items.fUnitName}}"  data-fnorms="{{items.fNorms}}" data-fprice="{{items.fPrice}}" data-fbname="{{items.fBrandName}}" data-fconf="{{items.fConf}}" data-furl="{{items.fUrl}}">
+              <image src="{{ArrowRight}}"/>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+  <view class='foot'>
+    <view class='foot_c_grp'>
+      <view class='btn' bindtap='selectBrand' data-fid="{{currentfID}}" wx:if="{{currentHasBrand}}">选品牌</view>
+      <view class='btn disabled' bindtap='ToNoBrand' wx:else>选品牌</view>
+      <view class='foot_btn btn' bindtap='ToShopCity'>辅材商城</view>
+    </view>
+  </view>
+</view>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <select-brand fid="{{currentfID}}" bindupdate="onUpdate"></select-brand>
+</action-sheet>

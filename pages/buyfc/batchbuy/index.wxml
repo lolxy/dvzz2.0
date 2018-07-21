@@ -1,0 +1,48 @@
+<view class="batch-container">
+  <view class='header'>
+    <scroll-view class="main-menu" scroll-x>
+      <view class='item' wx:for="mainMenuList" wx:key="{{index}}">
+        <view>
+          <image src="./images/icon.png"></image>
+          <text class='on'>基础辅材</text>
+        </view>
+      </view>
+    </scroll-view>
+    <scroll-view class="sub-menu" scroll-x>
+      <view class='item' wx:for="subMenuList" wx:key="{{index}}">
+        <view><text class='tit on'>电线类</text><text class='badge'>17</text></view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='body'>
+    <view class='table-header'>
+      <text class='t1'>商品</text>
+      <text class='t2'>名称</text>
+      <text class='t3'>价格</text>
+      <text class='t4'>数量</text>
+    </view>
+    <view class='table-body'>
+      <scroll-view class='scroll-list' scroll-y scroll-top="{{scrollTop}}">
+        <batch-select></batch-select>
+      </scroll-view>
+    </view>
+    <view class='table-footer'>
+      <view class='add'>
+        <image src="./images/add.png" class='icon'></image>
+        <text>新增项目</text>
+      </view>
+      <view class='total'>小计：12548元</view>
+    </view>
+  </view>
+
+  <view class='footer'>
+    <view class='sum'>合计：12548元</view>
+    <view class='btn-box'>
+      <view class='btn btn-outline btn-radius'>选品牌</view>
+    </view>
+    <view class='btn-box'>
+      <view class='btn btn-full btn-radius' bindtap='submitList'>提交</view>
+    </view>
+  </view>
+</view>

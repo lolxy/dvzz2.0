@@ -1,0 +1,20 @@
+<view class="evaluate-item">
+  <image src="{{photo}}" class='photo'></image>
+  <view class='content'>
+    <view class='title'>
+      <view class='tbox'>138****5261</view>
+      <text>2018-05-02</text>
+    </view>
+    <view class='scope'>
+      <block wx:for="scope" wx:key="index">
+        <view class='s' wx:if="{{index < 3}}">
+          <image src='{{scopeIcon}}' class='icon'></image>
+        </view>
+        <view class='s' wx:else>
+          <image src='{{nscopeIcon}}' class='icon'></image>
+        </view>
+      </block>
+    </view>
+    <view class='des'>瓷砖的仿真程度很高，玉纹的裂纹看着很真实，瓷砖印得很清晰，没 有杂牌模糊的感觉，可以放心购买，挺高档的。瓷砖的仿真程度很高，玉纹的裂纹看着很真实，瓷砖印得很清晰，没 有杂牌模糊的感觉，可以放心购买，挺高档的。</view>
+  </view>
+</view>

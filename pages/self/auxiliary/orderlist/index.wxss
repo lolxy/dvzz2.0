@@ -1,0 +1,272 @@
+/* pages/self/auxiliary/orderlist/index.wxss */
+@import '../../../../style/common.wxss';
+.container {
+  height: 100%;
+  background-color: #f3f3f3;
+  position: absolute;
+}
+.head {
+  width: 100%;
+  height: 200rpx;
+  padding: 40rpx 20rpx; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 2rpx solid #ddd;
+}
+.order_tabs {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.order_tabs image {
+  max-width: 72rpx;
+  max-height:72rpx;
+  margin-bottom: 12rpx;
+}
+.order_tabs view {
+  font-size: 28rpx;  
+  font-weight: normal;
+  line-height: 1em;
+  color: #333333;
+}
+.typelist {
+  width: 100%;
+  margin-bottom: 20rpx;
+  padding: 10rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+}
+.typelist  view {
+  flex:1;
+  width: 20%;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  height: 60rpx;
+  color: #999999;
+  text-align: center;
+}
+
+.typelist view text{
+  padding-bottom: 8rpx;
+  border-bottom:4rpx solid #fff;
+}
+.typelist view.active text{
+  color: #ff6600;
+  border-bottom:4rpx solid #ff6600;
+}
+/** 订单列表 **/
+.order_list {
+  width: 100%;
+  padding: 20rpx;
+  padding-top:0;
+}
+
+.order_list.pb125{
+  padding-bottom: 125rpx;
+}
+
+.order_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  border-radius: 10rpx;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.order_item + .order_item {
+  margin-top:20rpx;
+}
+.order_item_head {
+  padding: 20rpx 20rpx 16rpx;
+  border-bottom: 2rpx solid #ddd;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.order_item_head view {
+  font-size: 24rpx;
+  line-height: 1em;
+  color: #666666;
+}
+.order_item_head view:last-child{
+  color: #d32f2e;
+}
+.order_item_body {
+  padding: 20rpx 20rpx 20rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  border-bottom: 2rpx solid #ddd;
+}
+.order_item_body > view:first-child{
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.order_item_body .checkbox {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 170rpx;
+  width: 100rpx;
+  text-align: center;
+}
+.foot .checkbox checkbox,.order_item_body .checkbox checkbox{
+  transform: scale(.7)
+}
+.order_item_img {
+  width: 170rpx;
+  height: 170rpx;
+  flex: none;
+  flex-shrink: 0;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.order_item_grp {
+  flex-shrink: 0;
+  padding: 30rpx 20rpx;
+}
+.order_item_name {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 1em;
+  color: #333333;
+}
+.order_item_totle {
+  width: 100%;
+  margin-top: 60rpx;
+  font-size: 30rpx;
+  line-height: 1em;
+  color: #D32F2E;
+}
+.order_item_body > view:last-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.order_item_body > view:last-child > view{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content:  flex-end;
+  align-items:center;
+}
+.order_item_body view:last-child image {
+  width: 20rpx;
+  height: 30rpx;
+}
+.order_item_num {
+  margin-right: 20rpx;
+  font-size: 24rpx;
+  line-height: 1em;
+  color: #666666;
+}
+.order_item_foot {
+  padding: 20rpx 20rpx 16rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.order_item_foot view {
+  font-size: 24rpx;
+  line-height: 1em;
+  color: #666666;
+}
+.order_item_foot view:last-child{
+  color: #666666;
+}
+.order_item_btn {
+  width: 160rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  line-height: 56rpx;
+  color: #ff6600;
+  text-align: center;
+  border-radius: 30rpx;
+  border: 2rpx solid #ff6600;
+}
+/**  底部(不具有共性)  **/
+.foot {
+  padding: 15rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.foot .checkbox {
+  font-size: 32rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  color: #999999;
+}
+.foot_r_grp {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.foot_r_grp view {
+  font-size: 32rpx;
+  line-height: 1em;
+  color: #D32F2E;
+}
+.foot_r_grp view.btn {
+  width: 260rpx;
+  margin-left: 20rpx;
+  padding: 19rpx 0;
+  border-radius: 35rpx;
+  text-align: center;
+  color: #ffffff;
+  background-color: #FF6600;
+}
+
+.foot_r_grp view.btn.disabled{
+  background-color: #999;
+}
+/**** 提示 ****/
+.tipsgrp {
+  width: 470rpx;
+  height: 360rpx;
+  margin: 230rpx auto;
+  padding: 40rpx 0 30rpx;
+  background-color: #ffffff;
+}
+.tipsgrp image {
+  margin: 0 auto;
+  width: 70rpx;
+  height: 70rpx;
+  display: block;
+}
+.tip_title {
+  margin: 30rpx 0;
+  font-size: 30rpx;
+  line-height: 1em;
+  color: #ff6600;
+  text-align: center;
+}
+.tip_cont {
+  margin: 0 auto;
+  max-width: 360rpx;
+  font-size: 24rpx;
+  line-height: 1.5em;
+  color: #333333;
+  text-align: center;
+}

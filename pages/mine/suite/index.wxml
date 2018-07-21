@@ -1,0 +1,22 @@
+<!--pages/mine/suite/index.wxml-->
+<view class='container'>
+<block wx:if="{{SuiteList.length}}">
+<radio-group>
+  <view class='list' wx:for="{{SuiteList}}" wx:key="{{index}}">
+    <view>
+      <view class='item_name'>{{item.fCustomerName}}</view>
+      <label class="radio" bindtap='ChangeCustomer' data-fcustid="{{item.fCustomerID}}">
+        <radio value="index" checked="{{item.fIsDefault==1}}"/>默认地址
+      </label>
+    </view>
+    <view class='item_addr'>{{item.fCustomerAddr}}</view>
+  </view >
+</radio-group>
+</block>
+<block wx:else>
+  <view class='nodata'>
+    您还没有绑定您的套房信息！
+  </view>
+</block>
+</view>
+

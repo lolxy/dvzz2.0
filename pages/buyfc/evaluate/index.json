@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "辅料服务店",
+  "usingComponents": {
+    "store-header": "/components/storeHeader/item",
+    "evaluate-item":"/components/evaluateItem/item"
+  }
+}

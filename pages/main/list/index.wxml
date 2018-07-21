@@ -1,0 +1,39 @@
+<!--pages/list/list.wxml-->
+<view class='containers'>
+  <view class='list-fixed'>
+    <search-box keyword="{{keyword}}" bindsearchevent="onSearch"></search-box>
+    <view class='list-header'>
+      <view class='toggle'>
+        <view class='tabsbox'>
+          <view data-type='goods' class="tab {{currentType == 'goods'?'active':''}}" bindtap="menuClick">商品</view>
+          <view data-type='brand' class="tab {{currentType == 'brand'?'active':''}}" bindtap="menuClick">品牌</view>
+        </view>
+        <view class='selected' style="left:{{currentType == 'goods'?'5rpx;':'180rpx;'}}"></view>
+      </view>
+      <view class='filter' bindtap='actionSheetTap' wx:if="{{currentType == 'goods'}}">
+        <image src="{{filterIcon}}"></image>
+        <text>筛选</text>
+      </view>
+    </view>  
+  </view>
+
+   <scroll-view class="cate-container" scroll-y="{{isScroll}}" scroll-top="{{scrollTop}}" enable-back-to-top="{{true}}" bindscrolltolower="scrollLower">
+  <view class='sub-cate' wx:if="{{displayType != 'budget'}}">
+    <sub-cate-list code="{{code}}" 
+    bindcustomevent="onUpdateScrollStatus"
+    bindchangecurrentcate="onChangeCurrentCate"/>
+  </view>
+  <view class='listbox' wx:if="{{currentType == 'goods'}}">
+    <product-list list="{{goodsList}}" displayType="{{displayType}}" wx:if="{{goodsList.length}}"></product-list>
+    <view class='loaded' wx:if="{{loadedGoods}}">没有更多数据了！</view>
+  </view>
+   <view class='listbox' wx:else>
+    <brands-list id="brands" brandList="{{brandList}}" bindcustomevent="onUpdateGoodsList"></brands-list>
+    <view class='loaded' wx:if="{{loadedBrand}}">没有更多数据了！</view>
+  </view>
+  </scroll-view>
+
+ <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <filter-action-sheet fDefault="{{fDefault}}" filterList="{{filterList}}" selected="{{selected}}" displayType="{{displayType}}" fBrandName="{{fBrandName}}" bindfiltersearch="filterSearch" bindresetsearch="resetFilterSearch"></filter-action-sheet>
+</action-sheet>
+</view>

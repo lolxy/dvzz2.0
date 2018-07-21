@@ -1,0 +1,42 @@
+<view class="address-add-wrapper">
+  <view class='box'>
+    <view class='dl'>
+      <view class='dt'>收货人：</view>
+      <view class='dd'><input placeholder="输入收货人姓名" value='蔡明明'/></view>
+    </view>
+
+    <view class='dl'>
+      <view class='dt'>联系电话：</view>
+      <view class='dd'><input type="number" placeholder="请输入收货人联系电话" value='13959907098'/></view>
+    </view>
+  </view>
+
+  <view class='box'>
+    <view class='dl'>
+      <view class='dt'>所在地区：</view>
+      <view class='dd'>福建 泉州市 丰泽区 东海街道</view>
+    </view>
+
+    <view class='dl'>
+      <view class='dt'>详细地址：</view>
+      <view class='dd'><input placeholder="小区、楼牌号等" value='东海大街马可波罗1080号'/></view>
+    </view>
+  </view>
+
+  <view class='box'>
+    <view class='default'>
+      <text>设为默认地址</text>
+      <switch color="#ff6600" bindchange="switchChange"/>
+    </view>
+  </view>
+</view>
+
+<view class='action-btnbox'>
+  <view class='btn btn-outline' bindtap='dellAddress'>删除</view>
+  <view class='btn btn-warning' bindtap='saveAddress'>保存</view>
+</view>
+
+<!-- 提示弹窗 -->
+<view hidden="{{hiddenComfirmModal}}">
+<comfirm-modal comfirmType="{{comfirmType}}" selectArr="{{selectArr}}" content="确认要删除该地址吗？" bindcomfirm="actionComfirm" bindclose="actionClose"></comfirm-modal>
+</view>

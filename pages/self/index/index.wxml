@@ -1,0 +1,82 @@
+<!--self/index.wxml-->
+<scroll-view class="container" scroll-y="{{true}}">
+  <view class='index_head'>
+    <view class='local'>
+      <image src='{{LocalImage}}' class='localicon'></image>
+      <picker mode = "selector" bindchange="cityChange" value="0" range="{{citylist}}" range-key="fValue">
+        <view class="picker">
+          {{currentCity}}<image class='down-icon' src="{{downIcon}}"></image>
+        </view>
+      </picker>
+    </view>
+    <view class='index_icongrp'>
+      <image src='{{QRCode}}' bindtap='scanCode'></image>
+      <image src='{{PhoneIcon}}' bindtap='phonecall'></image>
+      <image src='{{msgIcon}}' bindtap='message'></image>
+    </view>
+  </view>
+  <view class="customer-top">
+    <swiper class='customer-banner' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item.bPath}}" class="slide-image" data-ftype="{{item.fType}}" data-bUrl="{{item.bUrl}}" bindtap='toOutLink'/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='linkgrp'>
+    <view class='linkitem' wx:for="{{LinkList}}" data-url="{{item.fUrl}}" bindtap='JumpTo' wx:key="{{index}}">
+      <image class='linkimg' src='{{item.fImgUrl}}'></image>
+      <view class='linkname'>{{item.fTitle}}</view>
+    </view>
+  </view>
+  <view class='statusgrp' wx:if="{{fCustomerID && StutList.length>0}}">
+    <view class='stathead'>
+      <image src='{{StutImage}}'></image>
+      <span>工地材料进度</span>
+    </view>
+    <swiper class='customer-banner' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval2}}" duration="{{duration}}" style="height: 180rpx;">
+      <block wx:for="{{StutList}}" wx:key="{{index}}">
+        <swiper-item>
+          <view class='stat_cont'>
+            <view class='stat_cont_l'>
+              <view class='statitempic'>
+                <image src='{{item.fUrl || loadimg}}'></image>
+              </view>
+              <view>
+                <view class='stat_l_name'>{{item.title}}</view>
+                <view class='stat_l_item'>{{item.fTypeCategory}}</view>
+                <view class='stat_l_date'>{{item.time}}</view>
+              </view>
+            </view>
+            <view class='stat_cont_r'>
+              <view class='btn' bindtap='chickbtn' data-soid="{{item.fSaleOrderID}}" data-cate="{{item.fTypeCategory}}">{{item.butt}}</view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+
+  </view>
+  <view class='shopgrp'>
+    <view class='shophead' bindtap='ToStationList'>
+      <image src='{{ShopIcon}}'></image>
+      <span>多维自装服务站</span>
+    </view>
+    <view class='shopcont' wx:for="{{ShopList}}" wx:key="{{index}}">
+      <image src="{{item.fUrl}}" class='shop_cont_pic' bindtap='showimg' data-url="{{item.fUrl}}"></image>
+      <view class='shop_cont_r'>
+        <view class='shop_cont_title'>
+          <view class='shop_cont_name'>{{item.fShopName}}</view>
+          <view class='shop_cont_range'>{{item.distance}}</view>
+        </view>
+        <view class='shop_cont_uname'>{{item.fShopPsn}}</view>
+        <view class='shop_cont_btngrp'>
+          <view class='btn btn_call' data-phone="{{item.fMobile}}" bindtap='CallMobile'><image src="{{CallIcon}}"></image>联系</view>
+          <view class='btn btn_navi' data-lat="{{item.lat}}" data-lng="{{item.lng}}" data-add="{{item.fShopName}}" data-distance="{{item.distance}}" bindtap='tomap'><image src="{{NaviIcon}}"></image>导航</view>
+          <view class='btn btn_praise' bindtap='toeva'><image src="{{AppraiseIcon}}"></image>评价</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

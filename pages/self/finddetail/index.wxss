@@ -1,0 +1,105 @@
+/* pages/self/finddetail/index.wxss */
+@import '../../../style/common.wxss';
+.fdhead {
+  width: 100%;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.UPhoto {
+  width: 280rpx;
+  height: 280rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+  flex-basis: 280rpx;
+}
+.fdhead > view {
+  flex-basis: 400rpx;
+  padding: 5rpx 0;
+}
+.fd_title {
+  flex: auto;
+  padding: 15rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.fd_title view {
+  font-size: 28rpx;
+  line-height: 1em;
+  color: #333333;
+}
+.fd_title view:nth-child(2){
+  color: #666666;
+}
+.fd_phone {
+  padding: 15rpx 0;
+  font-size: 28rpx;
+  line-height: 1em;
+  color: #333333;
+}
+.fd_discript {
+  max-width: 400rpx;
+  padding: 10rpx 0;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #666;
+}
+
+.scorll_titles{
+  height: 88rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #dedede;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  color:#ff6600;
+  font-size: 36rpx;
+}
+
+.scorll_titles image{
+  width: 36px;
+  height: 36px;
+  margin-right: 15rpx;
+}
+
+.scorll_list{
+  min-height: 150rpx;
+  background-color: #fff;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  color:#666;
+  font-size: 30rpx;
+}
+
+.contact-box{
+  width: 100%;
+  height: 88rpx;
+  box-shadow: 0 -2rpx 10rpx #dedede;
+  background-color:#fff;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box .btn{
+  width: 90%;
+  height: 58rpx;
+  line-height: 58rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color:#fff;
+  background-color: #ff6600;
+  border-radius: 58rpx;
+}

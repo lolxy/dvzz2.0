@@ -1,0 +1,17 @@
+<view class="evaluate-wrap">
+  <view class='evaluate-header'>
+    <store-header></store-header>
+    <view class='e-header'>
+      <text>评论（150）</text>
+      <navigator url='#'>更多<image src="{{rightIcon}}"></image></navigator>
+    </view>
+  </view>
+
+  <view class='evaluate-body'>
+    <view class='e-list'>
+      <block wx:for="{{eList}}" wx:key="{{index}}">
+        <evaluate-item></evaluate-item>
+      </block>
+    </view>
+  </view>
+</view>

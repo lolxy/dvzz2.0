@@ -1,0 +1,63 @@
+/* pages/detail/detail.wxss */
+.evaluate{
+  background-color: #f3f3f3;
+}
+
+.ev-item{
+  display: flex;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #dedede;
+}
+
+.ev-item .photo{
+  border-radius: 80rpx;
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 20rpx;
+}
+
+.ev-item .content{
+  flex:1;
+  color:#666;
+  font-size: 20rpx;
+}
+
+.c-head{
+line-height: 50rpx;
+display: flex;
+justify-content: space-between;
+}
+
+.c-head .phone{
+color:#333;
+font-size: 26rpx;
+font-weight: bold;
+}
+
+.c-info{
+line-height: 40rpx;
+}
+
+.imglist{
+  width: 420rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imglist image{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.loaded{
+  color:#999999;
+  font-size:24rpx;
+  line-height: 40rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}

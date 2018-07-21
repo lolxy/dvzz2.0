@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "development":"/components/development/item"
+  }
+}

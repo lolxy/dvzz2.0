@@ -1,0 +1,31 @@
+<!--pages/self/station/index.wxml-->
+<view class="container" scroll-y="{{true}}">
+  <view class='shopgrp'>
+    <view class='stationhead'  >
+      <view class='station_head_item' bindtap='chgstat' data-isnormal="0" data-distance=''>
+        <view>距离最近</view>
+      </view>
+      <view class='station_head_item' bindtap='chgstat' data-isnormal="2" data-distance='{{distance}}'>
+        <view>距离最近</view>
+        <image src="{{unknownimgurl}}" wx:if="{{isNormal==0}}"></image>
+        <image src="{{downimgurl}}" wx:elif="{{distance==1}}"></image>
+        <image src="{{upimgurl}}" wx:elif="{{distance==0}}"></image>
+      </view>
+    </view>
+    <view class='shopcont' wx:for="{{itemdetail}}" wx:key="{{index}}">
+      <image src="{{item.fMainPicPath}}" class='shop_cont_pic' bindtap='showimg' data-url="{{item.fMainPicPath}}"></image>
+      <view class='shop_cont_r'>
+        <view class='shop_cont_title'>
+          <view class='shop_cont_name'>{{item.fShopName}}</view>
+          <view class='shop_cont_range'>{{item.distance}}</view>
+        </view>
+        <view class='shop_cont_uname'>{{item.fShopPsn}}</view>
+        <view class='shop_cont_btngrp'>
+          <view class='btn btn_call' bindtap='TakePhoneCall' data-phone="{{item.fShopPhone}}"><image src="{{CallIcon}}"></image>联系</view>
+          <view class='btn btn_navi'><image src="{{NaviIcon}}"></image>导航</view>
+          <view class='btn btn_praise'><image src="{{AppraiseIcon}}"></image>评价</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

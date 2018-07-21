@@ -1,0 +1,23 @@
+<!--components/searchBox/searchBox.wxml-->
+<view class='search-wrap' wx:if="{{displayType != 'fucai'}}">
+  <view class='search'>
+    <view class='search-box'>
+      <image src="{{searchIcon}}"></image>
+      <input placeholder="搜索商品、店铺" placeholder-class="placecss" value='{{searchdata}}' confirm-type="search" bindinput="searchInput" bindconfirm="search"/>
+    </view>
+    <view class='btn' bindtap='search'>搜索</view>
+  </view>
+  <view class='sys' bindtap='scanCode'>
+    <image src='{{qrCodeIcon}}'></image>
+  </view>
+</view>
+
+<view class='search-wrap' wx:else>
+  <view class='search' bindtap='gotoSearch'>
+    <view class='search-box'>
+      <image src="{{searchIcon}}"></image>
+      <view class='search-input'>搜索商品</view>
+    </view>
+    <view class='btn'>搜索</view>
+  </view>
+</view>

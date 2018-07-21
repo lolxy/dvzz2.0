@@ -1,0 +1,4 @@
+<view class='development'>
+  <image class='warning' src='./images/warning.png'></image>
+  功能正在紧张开发中，敬请期待！
+</view>

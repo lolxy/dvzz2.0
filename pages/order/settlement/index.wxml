@@ -1,0 +1,11 @@
+<!--pages/order/settlement/index.wxml-->
+<view class='container'>
+  <view class='header'>
+    <view class='charge_title'>支付金额</view>
+    <view class='charge_num'> ¥ {{fAmount}}</view>
+  </view>
+  <view class='cash_btngrp'>
+    <view class='btn cash_btn_hove' bindtap='TocashiPay'>零钱支付（余额：{{cash}}）</view>
+    <view class='btn cash_btn_hove' bindtap='TowxPay'style="background-color: #7db343;">微信支付</view>
+  </view>
+</view>

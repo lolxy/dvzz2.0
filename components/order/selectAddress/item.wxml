@@ -1,0 +1,26 @@
+<view class="address-wrapper">
+  <view class='wrapper'>
+    <view class='area'>
+      <image src="{{areaIcon}}"></image>
+    </view>
+
+    <view class='address-info'>
+       <view class='info'>
+        <view class='contact'>
+          <text>收货人：李老三</text>
+          <text>18860107100</text>
+        </view>
+        <view class='address'>收货地址：福建省泉州市晋江市池店镇溜石村 48号鑫发展示道具福建省泉州市晋江市池店镇溜石村 48号鑫发展示道具福建省泉州市晋江市池店镇溜石村 48号鑫发展示道具</view>
+      </view> 
+      <!-- <view class='nodata'>暂无地址</view>
+      <view class='add'>添加地址</view> -->
+    </view>
+
+    <view class='right'>
+      <image src="{{rightIcon}}"></image>
+    </view>
+  </view>
+  <view class='borderbottom'>
+    <image src='{{borderbg}}' class='bdbg'></image>
+  </view>
+</view>
